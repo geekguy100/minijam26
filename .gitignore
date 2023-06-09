@@ -98,3 +98,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 ProjectSettings/RiderScriptEditorPersistedState.asset
+
+# MudBun Examples
+/[Aa]ssets/MudBun/Examples/
