@@ -22,10 +22,4 @@ MonoBehaviour:
   - Key: LastLoadedRequiredPackagesRevision
     Type: 1
     Value: 42
-  - Key: RequiredPacakgesLoaded
-    Type: 4
-    Value: mudbun-shaders;mudbun-materials;mudbun-resources
-  - Key: MudBunBurstNotFound
-    Type: 0
-    Value: True
   m_revision: 42
