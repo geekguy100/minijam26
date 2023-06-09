@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 9c51d3bcd1ad2ca46a16252dff25abde
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - triggerPulseChannel: {fileID: 11400000, guid: e14faca004de87d488ec2d09d385059d, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
