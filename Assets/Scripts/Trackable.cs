@@ -5,6 +5,7 @@ using UnityEngine;
 public class Trackable : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
+    private Transform originalParent;
 
     [SerializeField] private TrackableData data;
     [SerializeField] private Channel triggerPulseChannel;
@@ -24,6 +25,7 @@ public class Trackable : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        originalParent = transform.parent;
     }
 
     private void Start()
@@ -33,7 +35,14 @@ public class Trackable : MonoBehaviour
 
     private void Pulse()
     {
-        LeanTween.value(gameObject, SetAlpha, 1f, 0f, data.displayTime).setEase(data.easingType);
+        transform.SetParent(null);
+        LeanTween.value(gameObject, SetAlpha, 1f, 0f, data.displayTime).
+            setEase(data.easingType).
+            setOnComplete(() =>
+            {
+                transform.SetParent(originalParent);
+                transform.localPosition = Vector3.zero;
+            });
     }
 
     private void SetAlpha(float alpha)
