@@ -9,21 +9,46 @@ public class PowerSwitchInteractable : MonoBehaviour, IInteractable
     private bool isFlippedOn;
 
     [SerializeField] private BoolChannel powerChannel;
-    
+
+    #region Event Subbing
+    private void OnEnable()
+    {
+        powerChannel.OnEventRaised += HandlePowerChange;
+    }
+
+    private void OnDisable()
+    {
+        powerChannel.OnEventRaised += HandlePowerChange;
+    }
+    #endregion
+
     public void OnAssigned()
     {
+    }
+    
+    public void OnUnassigned()
+    {
+    }
+
+    private void HandlePowerChange(bool powerOn)
+    {
+        isFlippedOn = powerOn;
+
+        if (isFlippedOn)
+        {
+            GetComponent<MeshRenderer>().material.color = Color.green;
+        }
+        else
+        {
+            GetComponent<MeshRenderer>().material.color = Color.red;
+        }
+        
+        // TODO: Play an animation.
     }
 
     public void PerformInteraction()
     {
-        isFlippedOn = !isFlippedOn;
-        // TODO: Play an animation.
-        
-        powerChannel.RaiseEvent(isFlippedOn);
-    }
-
-    public void OnUnassigned()
-    {
+        powerChannel.RaiseEvent(!isFlippedOn);
     }
 
     public GameObject GetGameObject()
