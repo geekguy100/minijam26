@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GridField : MonoBehaviour
 {
@@ -18,6 +19,13 @@ public class GridField : MonoBehaviour
     private GameObject gridTileObject;
 
     private List<GridTile> gridLayout; // represents the entire [gridWidth, gridHeight] map
+
+    public int GridWidth => gridWidth;
+    public int GridHeight => gridHeight;
+    public float GridWidthSpacing => widthSpacing;
+    public float GridHeightSpacing => heightSpacing;
+
+    public UnityEvent onPopulationComplete;
 
     private void Start()
     {
@@ -39,6 +47,7 @@ public class GridField : MonoBehaviour
             tile.transform.position = (new Vector2(coordinate.x * widthSpacing, coordinate.y * heightSpacing)).ToVector3();
         }
 
+        onPopulationComplete?.Invoke();
     }
 
     /// <summary>
@@ -47,7 +56,7 @@ public class GridField : MonoBehaviour
     /// <param name="x"></param>
     /// <param name="y"></param>
     /// <returns></returns>
-    private int GetIndexFromCoordinate(Vector2 coordinate)
+    public int GetIndexFromCoordinate(Vector2 coordinate)
     {
         return (int)(coordinate.x * gridHeight + coordinate.y);
     }
@@ -57,7 +66,7 @@ public class GridField : MonoBehaviour
     /// </summary>
     /// <param name="idx"></param>
     /// <returns></returns>
-    private Vector2 GetCoordinateFromIndex(int idx)
+    public Vector2 GetCoordinateFromIndex(int idx)
     {
         int x = idx / gridHeight;
         int y = idx - x * gridHeight;
