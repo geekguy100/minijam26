@@ -11,4 +11,5 @@ public interface IInteractable
     void OnUnassigned();
     GameObject GetGameObject();
     string GetName();
+    string GetDescription();
 }

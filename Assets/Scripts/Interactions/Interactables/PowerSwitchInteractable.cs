@@ -35,4 +35,9 @@ public class PowerSwitchInteractable : MonoBehaviour, IInteractable
     {
         return "Breaker Switch";
     }
+
+    public string GetDescription()
+    {
+        return "turn " + (isFlippedOn ? "off " : "on ");
+    }
 }

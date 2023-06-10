@@ -1,13 +1,16 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// An object capable of interacting with IInteractables.
 /// </summary>
 public class Interactor : MonoBehaviour
 {
-    private IInteractable currentInteractable;
     public bool HasInteractable => !ReferenceEquals(currentInteractable, null);
+    private IInteractable currentInteractable;
+    
+    [SerializeField] private UnityEvent<IInteractable> onAssigned;
+    [SerializeField] private UnityEvent onUnassigned;
     
     public void AssignInteractable(IInteractable interactable)
     {
@@ -15,6 +18,8 @@ public class Interactor : MonoBehaviour
 
         currentInteractable = interactable;
         currentInteractable.OnAssigned();
+        
+        onAssigned?.Invoke(interactable);
     }
 
     public void Interact()
@@ -32,6 +37,8 @@ public class Interactor : MonoBehaviour
         
         currentInteractable.OnUnassigned();
         currentInteractable = null;
+        
+        onUnassigned?.Invoke();
     }
 
     /// <summary>
