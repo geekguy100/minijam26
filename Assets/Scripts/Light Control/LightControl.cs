@@ -108,6 +108,7 @@ public class LightControl : MonoBehaviour
         //_lightControlnteractable = LCI;
         Debug.Log("Setting up Lighthouse Camera...");
         _player = _playerTemp;//PlayerInstigator;
+        _player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         _playerCam = _player.GetComponentInChildren<CinemachineVirtualCamera>();
         _playerMovement = _player.GetComponentInChildren<PlayerMovementComponent>();
         if(_playerCam == null || _playerMovement == null)
@@ -181,6 +182,7 @@ public class LightControl : MonoBehaviour
         lightvcam.gameObject.SetActive(false);
         _playerCam.enabled = true;
         _playerCam.gameObject.SetActive(true);
+        _player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         Debug.Log("Exit Light control steering, switch back to player!");
     }
     #endregion
