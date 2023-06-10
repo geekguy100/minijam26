@@ -100,5 +100,11 @@ $RECYCLE.BIN/
 ProjectSettings/RiderScriptEditorPersistedState.asset
 .vsconfig
 
+#Assets external packages
+Assets/Feel/FeelDemos/
+Assets/Feel/NiceVibrations/OlderVersions/
+Assets/MudBun/Compatibility
+Assets/Sycoforge/Easy Decal/_Extensions
+
 # MudBun Examples
 /[Aa]ssets/MudBun/Examples/
