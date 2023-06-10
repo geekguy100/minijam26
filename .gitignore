@@ -99,3 +99,6 @@ $RECYCLE.BIN/
 *.lnk
 ProjectSettings/RiderScriptEditorPersistedState.asset
 .vsconfig
+
+# MudBun Examples
+/[Aa]ssets/MudBun/Examples/
