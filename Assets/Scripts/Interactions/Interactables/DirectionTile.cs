@@ -8,14 +8,13 @@ public class DirectionTile : MonoBehaviour, IInteractable
     private Transform directionIndication;
     private SpriteRenderer spriteRenderer;
     private MMScaleShaker shaker;
-    
+
     [SerializeField] private MMF_Player feedbackPlayer;
     
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private DirectionTileData data;
 
     #region Initialization
-
     private void Awake()
     {
         shaker = GetComponent<MMScaleShaker>();
@@ -83,10 +82,5 @@ public class DirectionTile : MonoBehaviour, IInteractable
     public void PerformInteraction()
     {
         transform.Rotate(Vector3.up, 90f);
-    }
-    
-    public Vector3 GetDirection()
-    {
-        return transform.forward;
     }
 }
