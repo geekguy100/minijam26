@@ -9,12 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddd764d8844226b4f9bd933575789956, type: 3}
-  m_Name: Player Interactor Controls
+  m_Script: {fileID: 11500000, guid: 114c80f73a6647899b40f2f1213e0e0e, type: 3}
+  m_Name: LightControlChannel
   m_EditorClassIdentifier: 
-  interactionKey: 101
-  exitLightKey: 27
-  PlayerControlForwardKey: 119
-  PlayerControlBackKey: 115
-  PlayerControlLeftKey: 97
-  PlayerControlRightKey: 100

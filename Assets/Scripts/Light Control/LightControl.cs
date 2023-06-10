@@ -1,6 +1,4 @@
 using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LightControl : MonoBehaviour
@@ -10,10 +8,7 @@ public class LightControl : MonoBehaviour
      * - Player can interact
      * - will inherit from interactable
      * - will need have info accessible for map to read from for proper orientation sync
-     * - can either spin left or right
-     * 
-     * Questions/Things to consider:
-     * - how do we want the player to interact?
+     * - will have x and y rotation
      *      - player should be able to turn one way or another and must go below decks to see if they see anything new
      *      - should rotate via mouse input
      * 
@@ -23,11 +18,13 @@ public class LightControl : MonoBehaviour
      * 
      * - isotripic birds eye view
      * - will have the tile selector build in (no more telescope)
-     * - 
+     * - basic behavior seems good, just need to hook it up and adjust when we get models to work with
      */
 
     public GameObject _playerTemp;
     public bool InteractSimulate = false;
+
+    [SerializeField] private PlayerInteractorControls controls;
 
     //whatever direction we are currently facing, that should be the only visible area outside
     //will have the fog of war be a seperate component?
@@ -58,11 +55,12 @@ public class LightControl : MonoBehaviour
     GameObject _player;
     CinemachineVirtualCamera _playerCam;
     PlayerMovementComponent _playerMovement;
+    LightControlInterable _lightControlnteractable;
 
 
-    //snappiness
-    float xAccumulator, yAccumulator;
-    const float Snappiness = 10.0f;
+    //snappiness - not gunna use
+    //float xAccumulator, yAccumulator;
+    //const float Snappiness = 10.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -78,7 +76,7 @@ public class LightControl : MonoBehaviour
         if(InteractSimulate)
         {
             
-            SetUpLightControlSteering(_playerTemp);
+            SetUpLightControlSteering(null);
         }
 
         //only steer if we are currently using the LightControlCamera
@@ -91,16 +89,17 @@ public class LightControl : MonoBehaviour
     }
     
     //runs when player interacts with the light control, switch from player cam to this cam
-    public void SetUpLightControlSteering(GameObject PlayerInstigator)
+    public void SetUpLightControlSteering(LightControlInterable LCI)//GameObject PlayerInstigator)
     {
+        _lightControlnteractable = LCI;
         Debug.Log("Setting up Lighthouse Camera...");
-        _player = PlayerInstigator;
-        _playerCam = PlayerInstigator.GetComponentInChildren<CinemachineVirtualCamera>();
-        _playerMovement = PlayerInstigator.GetComponentInChildren<PlayerMovementComponent>();
+        _player = _playerTemp;//PlayerInstigator;
+        _playerCam = _player.GetComponentInChildren<CinemachineVirtualCamera>();
+        _playerMovement = _player.GetComponentInChildren<PlayerMovementComponent>();
         if(_playerCam == null || _playerMovement == null)
         {
             //test print (will remove)
-            Debug.Log("NO CAMERA OR MOVEMENT FOUND ON PLAYER!" + _playerCam == null + " " +  _playerMovement == null);
+            Debug.LogWarning("NO CAMERA OR MOVEMENT FOUND ON PLAYER!");
             return;
         }
 
@@ -123,8 +122,8 @@ public class LightControl : MonoBehaviour
 
     void ControlLightCamera()
     {
-        
-        if(Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey(KeyCode.Escape))
+        //TO DO: may add enter or remove it entirely
+        if(Input.GetKey(KeyCode.KeypadEnter) || Input.GetKeyDown(controls.ExitLightKey))
         {
             //for now if they see somewhere they want to keep looking at, press enter
             // will definately need to change it
@@ -184,7 +183,7 @@ public class LightControl : MonoBehaviour
     //when player exits the camera, we have to switch it back to the player camera
     public void ExitLightControlSteering()
     {
-        
+        _lightControlnteractable.OnPlayerExit();
         _playerMovement.enabled = true;
         lightvcam.enabled = false;
         lightvcam.gameObject.SetActive(false);
