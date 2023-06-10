@@ -24,8 +24,5 @@ MonoBehaviour:
     Value: 42
   - Key: RequiredPacakgesLoaded
     Type: 4
-    Value: mudbun-shaders;mudbun-materials;mudbun-resources
-  - Key: MudBunBurstNotFound
-    Type: 0
-    Value: True
+    Value: mudbun-shaders
   m_revision: 42
