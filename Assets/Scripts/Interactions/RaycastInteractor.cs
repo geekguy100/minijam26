@@ -24,6 +24,8 @@ public class RaycastInteractor : MonoBehaviour
     {
         Ray ray = new Ray(raycastOrigin.position, raycastOrigin.forward);
         
+        Debug.DrawRay(ray.origin, ray.direction * 10f, Color.red);
+        
         // If we hit an interactable, assign it if it is not the one we already have assigned to us.
         if (Physics.Raycast(ray, out RaycastHit hitInfo, interactionDistance, whatIsInteractable))
         {
