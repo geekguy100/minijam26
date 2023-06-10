@@ -499,6 +499,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0bd1a5b6c6d4b1f9d303881c9e708ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whatIsInteractable:
+    serializedVersion: 2
+    m_Bits: 128
   onAssigned:
     m_PersistentCalls:
       m_Calls:
@@ -542,9 +545,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastOrigin: {fileID: 2880463918923215797}
-  whatIsInteractable:
-    serializedVersion: 2
-    m_Bits: 128
   interactionDistance: 2
 --- !u!114 &5427946757443250982
 MonoBehaviour:

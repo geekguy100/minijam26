@@ -538,6 +538,7 @@ MonoBehaviour:
   tileSelected: {fileID: 0}
   tileActive: {fileID: 0}
   raycasthit: {fileID: 0}
+  TurnOnLineR: 0
 --- !u!120 &5129133910444491909
 LineRenderer:
   serializedVersion: 2
@@ -585,7 +586,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 7.73235
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
