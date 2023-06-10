@@ -29,17 +29,10 @@ public class RaycastInteractor : MonoBehaviour
         // If we hit an interactable, assign it if it is not the one we already have assigned to us.
         if (Physics.Raycast(ray, out RaycastHit hitInfo, interactionDistance, whatIsInteractable))
         {
-            GameObject hitTransform = hitInfo.transform.gameObject;
+            GameObject hitGameObject = hitInfo.transform.gameObject;
             
-            // Do not re-assign this interactable again.
-            if (interactor.MatchesInteractable(hitTransform))
+            if (!hitGameObject.TryGetComponent(out IInteractable interactable))
                 return;
-            
-            if (!hitTransform.TryGetComponent(out IInteractable interactable))
-            {
-                Debug.LogWarning("[RaycastInteractor]: " + hitTransform.name + " has no IInteractable component but is on the interactable layer...");
-                return;
-            }
             
             interactor.AssignInteractable(interactable);
         }

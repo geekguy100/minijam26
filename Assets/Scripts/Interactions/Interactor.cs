@@ -14,6 +14,9 @@ public class Interactor : MonoBehaviour
     
     public void AssignInteractable(IInteractable interactable)
     {
+        if (HasInteractable && MatchesInteractable(interactable.GetGameObject()))
+            return;
+
         UnassignInteractable();
 
         currentInteractable = interactable;
