@@ -13,6 +13,4 @@ public static class GameExtensions
     {
         return new Vector2(vec.x, vec.z);
     }
-
-
 }
