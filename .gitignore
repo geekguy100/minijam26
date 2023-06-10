@@ -100,11 +100,11 @@ $RECYCLE.BIN/
 ProjectSettings/RiderScriptEditorPersistedState.asset
 .vsconfig
 
-#Assets external packages
-/[Aa]ssets/Feel/FeelDemos/
-/[Aa]ssets/Feel/NiceVibrations/OlderVersions/
-/[Aa]ssets/MudBun/Compatibility/
-/[Aa]ssets/Sycoforge/Easy Decal/_Extensions/
+# Assets external packages
+/[Aa]ssets/Feel/FeelDemos/*.unitypackage.meta*
+/[Aa]ssets/Feel/NiceVibrations/OlderVersions/*.unitypackage.meta*
+/[Aa]ssets/MudBun/Compatibility/*.unitypackage.meta*
+/[Aa]ssets/Sycoforge/Easy Decal/_Extensions/*.unitypackage.meta*
 
 # MudBun Examples
-/[Aa]ssets/MudBun/Examples/
+/[Aa]ssets/MudBun/Examples/*.unitypackage.meta*
