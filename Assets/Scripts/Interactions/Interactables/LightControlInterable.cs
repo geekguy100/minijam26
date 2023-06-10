@@ -36,14 +36,13 @@ public class LightControlInterable : MonoBehaviour, IInteractable
     }
     private void HandleLightInteractChange(bool powerOn)
     {
-        Debug.Log("HandleLightInteractChange");
         isFlippedOn = powerOn;
 
         if (isFlippedOn)
         {
             //GetComponent<MeshRenderer>().material.color = Color.green;
             //run SetUpLightControlSteering
-            LightControl.SetUpLightControlSteering(this);
+            LightControl.SetUpLightControlSteering();
         }
         else
         {
@@ -62,7 +61,7 @@ public class LightControlInterable : MonoBehaviour, IInteractable
 
     public void OnAssigned()
     {
-        //Debug.Log("here");
+
 
     }
 

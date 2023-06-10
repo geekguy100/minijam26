@@ -21,9 +21,10 @@ public class LightControl : MonoBehaviour
      * - basic behavior seems good, just need to hook it up and adjust when we get models to work with
      */
 
+    #region Light Steering
+    [Header("Control and Steering")]
     public GameObject _playerTemp;
     public bool InteractSimulate = false;
-
     [SerializeField] private PlayerInteractorControls controls;
 
     //whatever direction we are currently facing, that should be the only visible area outside
@@ -55,19 +56,17 @@ public class LightControl : MonoBehaviour
     GameObject _player;
     CinemachineVirtualCamera _playerCam;
     PlayerMovementComponent _playerMovement;
-    LightControlInterable _lightControlnteractable;
+    public LightControlInterable lightControlnteractable;
+    #endregion
 
-
-    //snappiness - not gunna use
-    //float xAccumulator, yAccumulator;
-    //const float Snappiness = 10.0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-
-    }
+    #region Tile Interact
+    [Header("Tile Interact")]
+    [SerializeField] private Transform raycastOrigin;
+    [SerializeField] private LayerMask TileLayerMask;
+    [SerializeField] private float TileDetectionRange;
+    [SerializeField] private GameObject tileSelected;
+    public GameObject raycasthit;
+    #endregion
 
     // Update is called once per frame
     void Update()
@@ -76,7 +75,7 @@ public class LightControl : MonoBehaviour
         if(InteractSimulate)
         {
             
-            SetUpLightControlSteering(null);
+            SetUpLightControlSteering();
         }
 
         //only steer if we are currently using the LightControlCamera
@@ -87,11 +86,12 @@ public class LightControl : MonoBehaviour
         }
 
     }
-    
+
+    #region Light Steering/Control
     //runs when player interacts with the light control, switch from player cam to this cam
-    public void SetUpLightControlSteering(LightControlInterable LCI)//GameObject PlayerInstigator)
+    public void SetUpLightControlSteering()//GameObject PlayerInstigator)
     {
-        _lightControlnteractable = LCI;
+        //_lightControlnteractable = LCI;
         Debug.Log("Setting up Lighthouse Camera...");
         _player = _playerTemp;//PlayerInstigator;
         _playerCam = _player.GetComponentInChildren<CinemachineVirtualCamera>();
@@ -155,35 +155,10 @@ public class LightControl : MonoBehaviour
 
         AimLightRaycastCheck();
     }
-
-    public GameObject raycasthit;
-    //while we are active, we are checking what tile we are raycasting to
-    void AimLightRaycastCheck()
-    {
-        RaycastHit hit;
-        Vector3 rayStart = transform.position;
-        Debug.DrawRay(transform.position, -Vector3.up, Color.red, 5);
-        if (Physics.Raycast(rayStart, transform.TransformDirection(-transform.up), out hit, 15))
-        {
-            if (hit.transform.gameObject != this.gameObject)
-            {
-                //check if its tile
-                Debug.Log(hit.transform.name);
-                raycasthit = hit.transform.gameObject;
-                //if raycast hits a tile
-                if (LayerMask.LayerToName(hit.transform.gameObject.layer) == "Tile")
-                {
-
-
-                }
-            }
-        }
-    }
-
     //when player exits the camera, we have to switch it back to the player camera
     public void ExitLightControlSteering()
     {
-        _lightControlnteractable.OnPlayerExit();
+        lightControlnteractable.OnPlayerExit();
         _playerMovement.enabled = true;
         lightvcam.enabled = false;
         lightvcam.gameObject.SetActive(false);
@@ -191,4 +166,52 @@ public class LightControl : MonoBehaviour
         _playerCam.gameObject.SetActive(true);
         Debug.Log("Exit Light control steering, switch back to player!");
     }
+    #endregion
+
+    #region Tile Selection
+    //while we are active, we are checking what tile we are raycasting to
+    void AimLightRaycastCheck()
+    {
+        Ray ray = new Ray(raycastOrigin.position, raycastOrigin.forward);
+
+        Debug.DrawRay(ray.origin, ray.direction * 60f, Color.yellow);
+
+        // If we hit an interactable, assign it if it is not the one we already have assigned to us.
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, TileDetectionRange, TileLayerMask))
+        {
+            GameObject hitTransform = hitInfo.transform.gameObject;
+            if (hitInfo.transform.gameObject != this.gameObject)
+            {
+                //check if its tile
+                raycasthit = hitInfo.transform.gameObject;
+                if (!hitTransform.TryGetComponent(out GridTile Tile))
+                {
+                    Debug.LogWarning("[Raycast Light Control]: " + hitTransform.name + " has no GridTile component but is on the Tile layer...");
+                    return;
+                }
+
+                //if raycast hits a tile (TO DO: overhaul this once we have more backend tile stuff ready)
+                if(tileSelected != hitTransform.transform.gameObject)
+                {
+                    tileSelected = hitTransform.transform.gameObject;
+
+                    //TO DO: run event here maybe for on tile select
+
+
+                }
+                
+            }
+        } else if(tileSelected)
+        {
+            //TO DO: deselct tile (turn off highlight or whatever)
+
+
+            //unassign the tile selected
+            tileSelected = null;
+        }
+    }
+
+    #endregion
+
+
 }
