@@ -20,7 +20,7 @@ public class InteractorUIDisplay : MonoBehaviour
         displayField.text = "Press '" + interactorControls.InteractionKey +
                             "' to " +
                             (string.IsNullOrEmpty(description) ? "interact with " : description) + 
-                            interactable.GetName();
+                            "the " + interactable.GetName();
     }
 
     public void Hide()
