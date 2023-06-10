@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 355036ccfb2b4c7b93f9755326522e1a, type: 3}
   m_Name: Default Direction Tile Data
   m_EditorClassIdentifier: 
-  arrowSprite: {fileID: 0}
-  initialScale: {x: 0, y: 0, z: 0}
+  arrowSprite: {fileID: 21300000, guid: 94f43f82d46dcdb4db47e75f6c65be01, type: 3}
+  initialScale: {x: 1, y: 1, z: 1}
+  initialRotation: {x: 90, y: 0, z: -90}
