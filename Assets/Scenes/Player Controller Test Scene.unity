@@ -782,7 +782,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 272428878}
-  m_PlaneDistance: 0.1
+  m_PlaneDistance: 0.4
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -821,7 +821,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7346693275430359695, guid: 6d2801e61226be148b563072ad638449, type: 3}
   m_PrefabInstance: {fileID: 402342574163938131}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2050674092
+--- !u!114 &2050674099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -830,13 +830,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2050674083}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31686753adbc247469e5936544765620, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a394d9a8b953924e9c5aa819a93751f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeScale: 1
   StartGameTimer: 0
+  Clockprintout: 
   Gametime: {fileID: 176402766}
   StartTime: 120
-  timeRemaining: 0
 --- !u!1001 &402342574163938131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -889,6 +890,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5534761451355425295, guid: 6d2801e61226be148b563072ad638449, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7346693275430359695, guid: 6d2801e61226be148b563072ad638449, type: 3}
       propertyPath: m_Name
       value: Player
@@ -899,5 +904,5 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7346693275430359695, guid: 6d2801e61226be148b563072ad638449, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2050674092}
+      addedObject: {fileID: 2050674099}
   m_SourcePrefab: {fileID: 100100000, guid: 6d2801e61226be148b563072ad638449, type: 3}

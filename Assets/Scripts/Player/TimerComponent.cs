@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using TMPro;
 using System;
 using UnityEngine;
 
-public class PlayerUIComponent : MonoBehaviour
+public class TimerComponent : MonoBehaviour
 {
     //in case we want to have it move slower
     public float TimeScale = 1.0f;
@@ -32,16 +31,16 @@ public class PlayerUIComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(StartGameTimer)
+        if (StartGameTimer)
             CountDown();
     }
 
     void CountDown()
     {
         // bool can be triggered once 'shift' has officially started
-        if(_timeRunning)
+        if (_timeRunning)
         {
-            if(_timeRemaining > 0)
+            if (_timeRemaining > 0)
             {
                 _timeRemaining -= Time.deltaTime * TimeScale;
             }
@@ -62,7 +61,7 @@ public class PlayerUIComponent : MonoBehaviour
         float minutes = Mathf.FloorToInt(_timeRemaining / 60);
         float seconds = Mathf.FloorToInt(_timeRemaining % 60);
 
-        
+
         Clockprintout = string.Format("{0:00}:{1:00}", minutes, seconds);
         Gametime.text = Clockprintout;
         //Debug.Log(string.Format("{0:00}:{1:00}", minutes, seconds));
