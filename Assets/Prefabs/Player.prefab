@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 4770597366765718469}
   - component: {fileID: 7364921800803022983}
   - component: {fileID: 5427946757443250982}
+  - component: {fileID: 2577727620081349345}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -366,7 +367,7 @@ Transform:
   - {fileID: 2880463918923215797}
   - {fileID: 3919707457253160150}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &162337145465009315
 MeshFilter:
@@ -562,6 +563,19 @@ MonoBehaviour:
   Clockprintout: 
   Gametime: {fileID: 0}
   StartTime: 120
+--- !u!114 &2577727620081349345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7249582457643448693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da79f28749eb04a45b4fe1af5696b633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controls: {fileID: 11400000, guid: db61dbd9eec0442469a8128bdec3538e, type: 2}
 --- !u!1 &8703429965049464933
 GameObject:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ public class LightControl : MonoBehaviour
     [SerializeField]
     float _headLowerAngleLimit = -80.0f;
     float _yaw = 0, _pitch = 0;
-    public Transform LightTransform;
+   // public Transform LightTransform;
 
     public bool LockCamera = false;
 
@@ -61,12 +61,26 @@ public class LightControl : MonoBehaviour
 
     #region Tile Interact
     [Header("Tile Interact")]
-    [SerializeField] private Transform raycastOrigin;
+    [SerializeField] private Transform LightOrigin;
     [SerializeField] private LayerMask TileLayerMask;
     [SerializeField] private float TileDetectionRange;
     [SerializeField] private GameObject tileSelected;
+    [SerializeField] private GridTile tileActive;
     public GameObject raycasthit;
     #endregion
+
+    #region Light Env
+    LineRenderer LightLR;
+    Vector3 EndPos;
+    public bool TurnOnLineR = false;
+    //TileDetectoionRange to set where the light ends
+    #endregion
+
+    private void Start()
+    {
+
+        SetupLight();
+    }
 
     // Update is called once per frame
     void Update()
@@ -154,6 +168,9 @@ public class LightControl : MonoBehaviour
         }
 
         AimLightRaycastCheck();
+
+        if(TurnOnLineR)
+            MoveLightBeam();
     }
     //when player exits the camera, we have to switch it back to the player camera
     public void ExitLightControlSteering()
@@ -172,38 +189,39 @@ public class LightControl : MonoBehaviour
     //while we are active, we are checking what tile we are raycasting to
     void AimLightRaycastCheck()
     {
-        Ray ray = new Ray(raycastOrigin.position, raycastOrigin.forward);
+        Ray ray = new Ray(LightOrigin.position, LightOrigin.forward);
 
         Debug.DrawRay(ray.origin, ray.direction * 60f, Color.yellow);
 
         // If we hit an interactable, assign it if it is not the one we already have assigned to us.
-        if (Physics.Raycast(ray, out RaycastHit hitInfo, TileDetectionRange, TileLayerMask))
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, TileDetectionRange))
         {
             GameObject hitTransform = hitInfo.transform.gameObject;
             if (hitInfo.transform.gameObject != this.gameObject)
             {
                 //check if its tile
                 raycasthit = hitInfo.transform.gameObject;
-                if (!hitTransform.TryGetComponent(out GridTile Tile))
+                if (hitTransform.TryGetComponent(out GridTile Tile))
                 {
-                    Debug.LogWarning("[Raycast Light Control]: " + hitTransform.name + " has no GridTile component but is on the Tile layer...");
+                    //if raycast hits a tile (TO DO: overhaul this once we have more backend tile stuff ready)
+                    if (tileSelected != hitTransform.transform.gameObject)
+                    {
+                        tileSelected = hitTransform.transform.gameObject;
+                        tileActive = Tile;
+                        //TO DO: run event here maybe for on tile select
+                       // Debug.Log("Hit.");
+
+                    }
+                }
+                else
+                {
+                    //Debug.LogWarning("[Raycast Light Control]: " + hitTransform.name + " has no GridTile component...");
                     return;
                 }
-
-                //if raycast hits a tile (TO DO: overhaul this once we have more backend tile stuff ready)
-                if(tileSelected != hitTransform.transform.gameObject)
-                {
-                    tileSelected = hitTransform.transform.gameObject;
-
-                    //TO DO: run event here maybe for on tile select
-
-
-                }
-                
             }
         } else if(tileSelected)
         {
-            //TO DO: deselct tile (turn off highlight or whatever)
+            //TO DO: deselect tile (turn off highlight or whatever)
 
 
             //unassign the tile selected
@@ -213,5 +231,24 @@ public class LightControl : MonoBehaviour
 
     #endregion
 
+    #region Light Component
+    void SetupLight()
+    {
+        LightLR = GetComponent<LineRenderer>();
+        LightLR.positionCount = 2;
+        LightLR.startWidth = 0.0f;
+        LightLR.SetPosition(0, LightOrigin.position);
+        EndPos = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z + TileDetectionRange);
+        EndPos = transform.TransformPoint(EndPos);
+        LightLR.SetPosition(1, EndPos);
+    }
 
+    void MoveLightBeam()
+    {
+        EndPos = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z + TileDetectionRange);
+        EndPos = transform.TransformPoint(EndPos);
+        LightLR.SetPosition(1, EndPos);
+    }
+
+    #endregion
 }
