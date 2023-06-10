@@ -127,7 +127,7 @@ Transform:
   m_Children:
   - {fileID: 5534761451355425295}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6278214879749636498
 MeshFilter:
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4712c8b6dd0c434caa3b644b8810c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
-  turnSpeed: 600
+  movementSpeed: 7
+  turnSpeed: 550
   _headUpperAngleLimit: 85
   _headLowerAngleLimit: -80
