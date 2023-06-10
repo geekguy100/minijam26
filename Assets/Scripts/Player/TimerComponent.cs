@@ -1,47 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
+using TMPro;
+using System;
 using UnityEngine;
 
-public class PlayerUIComponent : MonoBehaviour
+public class TimerComponent : MonoBehaviour
 {
+    //in case we want to have it move slower
+    public float TimeScale = 1.0f;
+
     public bool StartGameTimer;
+
+    public string Clockprintout;
 
     //for now we can use a simple text object attached to the player but we might want to switch to either a clock
     //or some other object easily seen by the player in the enviornment
-    public Text Gametime;
+    public TMP_Text Gametime;
     public float StartTime;
 
-    public float timeRemaining;
+    float _timeRemaining;
 
     bool _timeRunning = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _timeRemaining = StartTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(StartGameTimer)
+        if (StartGameTimer)
             CountDown();
     }
 
     void CountDown()
     {
-        //
-        if(_timeRunning)
+        // bool can be triggered once 'shift' has officially started
+        if (_timeRunning)
         {
-            if(timeRemaining > 0)
+            if (_timeRemaining > 0)
             {
-                timeRemaining -= Time.deltaTime;
-
+                _timeRemaining -= Time.deltaTime * TimeScale;
             }
             else
             {
-                timeRemaining = 0;
+                _timeRemaining = 0;
                 _timeRunning = false;
 
                 OnTimerFinish();
@@ -53,11 +58,13 @@ public class PlayerUIComponent : MonoBehaviour
 
     void DisplayTime()
     {
+        float minutes = Mathf.FloorToInt(_timeRemaining / 60);
+        float seconds = Mathf.FloorToInt(_timeRemaining % 60);
 
-        float minutes = Mathf.FloorToInt(timeRemaining / 60);
-        float seconds = Mathf.FloorToInt(timeRemaining % 60);
 
-        Gametime.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        Clockprintout = string.Format("{0:00}:{1:00}", minutes, seconds);
+        Gametime.text = Clockprintout;
+        //Debug.Log(string.Format("{0:00}:{1:00}", minutes, seconds));
     }
 
     void OnTimerFinish()
