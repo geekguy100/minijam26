@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2699883181141150367}
   - component: {fileID: 7526880904162576596}
   - component: {fileID: 1014021736321707366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.3465646, g: 0.41568628, b: 0.41509432, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.024
+  m_FogDensity: 0.003
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -1703,7 +1703,7 @@ GameObject:
   - component: {fileID: 36339262}
   - component: {fileID: 36339261}
   - component: {fileID: 36339260}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1808,7 +1808,7 @@ GameObject:
   - component: {fileID: 37710746}
   - component: {fileID: 37710745}
   - component: {fileID: 37710744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4825,7 +4825,7 @@ GameObject:
   - component: {fileID: 185011244}
   - component: {fileID: 185011243}
   - component: {fileID: 185011242}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6972,7 +6972,7 @@ GameObject:
   - component: {fileID: 266787033}
   - component: {fileID: 266787032}
   - component: {fileID: 266787031}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7603,7 +7603,7 @@ GameObject:
   - component: {fileID: 305944026}
   - component: {fileID: 305944025}
   - component: {fileID: 305944024}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7932,7 +7932,7 @@ GameObject:
   - component: {fileID: 317389224}
   - component: {fileID: 317389223}
   - component: {fileID: 317389222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8709,7 +8709,7 @@ GameObject:
   - component: {fileID: 334580344}
   - component: {fileID: 334580343}
   - component: {fileID: 334580342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11726,7 +11726,7 @@ GameObject:
   - component: {fileID: 441271960}
   - component: {fileID: 441271959}
   - component: {fileID: 441271958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12983,7 +12983,7 @@ GameObject:
   - component: {fileID: 524231497}
   - component: {fileID: 524231496}
   - component: {fileID: 524231495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13312,7 +13312,7 @@ GameObject:
   - component: {fileID: 546083875}
   - component: {fileID: 546083874}
   - component: {fileID: 546083873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14761,7 +14761,7 @@ GameObject:
   - component: {fileID: 572363002}
   - component: {fileID: 572363001}
   - component: {fileID: 572363000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16882,7 +16882,7 @@ GameObject:
   - component: {fileID: 640301646}
   - component: {fileID: 640301645}
   - component: {fileID: 640301644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17274,6 +17274,30 @@ PrefabInstance:
     - target: {fileID: 2880463918923215797, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2880463918923215797, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99033433
+      objectReference: {fileID: 0}
+    - target: {fileID: 2880463918923215797, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.13870108
+      objectReference: {fileID: 0}
+    - target: {fileID: 2880463918923215797, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000008520035
+      objectReference: {fileID: 0}
+    - target: {fileID: 2880463918923215797, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000000011932719
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260591811310260248, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
+      propertyPath: field of view
+      value: 60.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260591811310260248, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
+      propertyPath: far clip plane
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4770597366765718469, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
       propertyPath: whatIsInteractable.m_Bits
@@ -18196,7 +18220,7 @@ GameObject:
   - component: {fileID: 679931183}
   - component: {fileID: 679931182}
   - component: {fileID: 679931181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18289,6 +18313,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679931179}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &684699072 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3073244793474088874, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+  m_PrefabInstance: {fileID: 1022013833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &703770929
 GameObject:
   m_ObjectHideFlags: 0
@@ -19421,7 +19450,7 @@ GameObject:
   - component: {fileID: 737389699}
   - component: {fileID: 737389698}
   - component: {fileID: 737389697}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22438,7 +22467,7 @@ GameObject:
   - component: {fileID: 828426547}
   - component: {fileID: 828426546}
   - component: {fileID: 828426545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25007,7 +25036,7 @@ GameObject:
   - component: {fileID: 892397867}
   - component: {fileID: 892397866}
   - component: {fileID: 892397865}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25112,7 +25141,7 @@ GameObject:
   - component: {fileID: 892659429}
   - component: {fileID: 892659428}
   - component: {fileID: 892659427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25441,7 +25470,7 @@ GameObject:
   - component: {fileID: 893577830}
   - component: {fileID: 893577829}
   - component: {fileID: 893577828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25770,7 +25799,7 @@ GameObject:
   - component: {fileID: 910952961}
   - component: {fileID: 910952960}
   - component: {fileID: 910952959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26547,7 +26576,7 @@ GameObject:
   - component: {fileID: 937034754}
   - component: {fileID: 937034753}
   - component: {fileID: 937034752}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27996,7 +28025,7 @@ GameObject:
   - component: {fileID: 1010037585}
   - component: {fileID: 1010037584}
   - component: {fileID: 1010037583}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28097,6 +28126,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 712489400355186031, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 712489400355186031, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 712489400355186031, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 712489400355186031, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531276783540074390, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2171340239243647501, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -28141,15 +28190,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3073244793474088874, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 637
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073244793474088874, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307088086742615055, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
       propertyPath: m_Name
       value: Lightouse Light
       objectReference: {fileID: 0}
+    - target: {fileID: 7305088174141141864, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_Range
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447736426192305872, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: towerView
+      value: 
+      objectReference: {fileID: 684699072}
     - target: {fileID: 7447736426192305872, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
       propertyPath: _playerTemp
       value: 
       objectReference: {fileID: 209142854}
-    m_RemovedComponents: []
+    - target: {fileID: 8809264010044729320, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809264010044729320, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809264010044729320, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809264010044729320, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_Priority
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809264010044729320, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 33.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809264010044729320, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 687.6
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6852367155062607914, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
+    - {fileID: 5222762227319136233, guid: 9c3960b71ca9529468792dc4d6ee77e9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -28384,7 +28475,7 @@ GameObject:
   - component: {fileID: 1030121621}
   - component: {fileID: 1030121620}
   - component: {fileID: 1030121619}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29846,14 +29937,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077193804}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: -0.009, y: -0.009, z: -0.148}
   m_LocalScale: {x: 0.34149152, y: 0.34149152, z: 0.34149152}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1152678314}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
 --- !u!23 &1077193806
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32997,7 +33088,7 @@ GameObject:
   - component: {fileID: 1195935922}
   - component: {fileID: 1195935921}
   - component: {fileID: 1195935920}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35839,7 +35930,7 @@ GameObject:
   - component: {fileID: 1280414716}
   - component: {fileID: 1280414715}
   - component: {fileID: 1280414714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38000,7 +38091,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 211.75761
+  orthographic size: 150.61725
   m_Depth: -90
   m_CullingMask:
     serializedVersion: 2
@@ -40955,7 +41046,7 @@ GameObject:
   - component: {fileID: 1501401701}
   - component: {fileID: 1501401700}
   - component: {fileID: 1501401699}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41284,7 +41375,7 @@ GameObject:
   - component: {fileID: 1540841685}
   - component: {fileID: 1540841684}
   - component: {fileID: 1540841683}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43181,7 +43272,7 @@ GameObject:
   - component: {fileID: 1670647018}
   - component: {fileID: 1670647017}
   - component: {fileID: 1670647016}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43510,7 +43601,7 @@ GameObject:
   - component: {fileID: 1677252476}
   - component: {fileID: 1677252475}
   - component: {fileID: 1677252474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44287,7 +44378,7 @@ GameObject:
   - component: {fileID: 1690863970}
   - component: {fileID: 1690863969}
   - component: {fileID: 1690863968}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49768,7 +49859,7 @@ GameObject:
   - component: {fileID: 1903055532}
   - component: {fileID: 1903055531}
   - component: {fileID: 1903055530}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51665,7 +51756,7 @@ GameObject:
   - component: {fileID: 1985575116}
   - component: {fileID: 1985575115}
   - component: {fileID: 1985575114}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54120,7 +54211,7 @@ GameObject:
   - component: {fileID: 2089320861}
   - component: {fileID: 2089320860}
   - component: {fileID: 2089320859}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GridLine(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
