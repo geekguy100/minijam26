@@ -375,10 +375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be321c8e128c724cad8b36a9cf9e409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minGoalDistance: 14
+  minGoalDistance: 7
   shipObject: {fileID: 5250631786135206592, guid: da36c974fb40a064aa1bdcaf788e513c, type: 3}
-  greenTestMat: {fileID: 2100000, guid: 471e0c0ca7136d4429b82d5031313222, type: 2}
-  redTestMat: {fileID: 2100000, guid: 5a8aa2b2ab007984ead9cee542f76574, type: 2}
 --- !u!114 &2130126734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +389,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09db1c2ea2a7b3544a01d5fbf29bf2f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teamColors:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5a8aa2b2ab007984ead9cee542f76574, type: 2}
+  - {fileID: 2100000, guid: efad7980c1745744b80e44d9fc2ee281, type: 2}
+  - {fileID: 2100000, guid: 471e0c0ca7136d4429b82d5031313222, type: 2}
+  TESTSCORE: 0
 --- !u!1001 &8226213087851672398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -406,6 +410,10 @@ PrefabInstance:
     - target: {fileID: 5250631786135206592, guid: da36c974fb40a064aa1bdcaf788e513c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599224164645849342, guid: da36c974fb40a064aa1bdcaf788e513c, type: 3}
+      propertyPath: translationSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8942256751406193199, guid: da36c974fb40a064aa1bdcaf788e513c, type: 3}
       propertyPath: m_RootOrder

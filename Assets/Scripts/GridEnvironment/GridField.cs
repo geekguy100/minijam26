@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class GridField : MonoBehaviour
 {
+    [SerializeField] private bool generateOnStart;
+    
     [SerializeField]
     private int gridWidth = 10;
     [SerializeField]
@@ -30,12 +32,16 @@ public class GridField : MonoBehaviour
 
     private void Start()
     {
-        GenerateField();
+        if (generateOnStart)
+            GenerateField();
     }
+    
+    [ContextMenu("Generate Field")]
     private void GenerateField()
     {
         gridLayout = new List<GridTile>();
         GridTile tile;
+        //
         Vector2 coordinate;
         //right now only generates blank tiles
         //map generation logic can potentially be here
@@ -45,7 +51,8 @@ public class GridField : MonoBehaviour
             tile = Instantiate(gridTileObject, transform).GetComponent<GridTile>();
             tile.AssignPosition(coordinate);
 
-            tile.transform.position = (new Vector2(coordinate.x * widthSpacing, coordinate.y * heightSpacing)).ToVector3();
+            tile.transform.localPosition = (new Vector2(coordinate.x * widthSpacing, coordinate.y * heightSpacing)).ToVector3();
+            tile.transform.localScale = new Vector3(widthSpacing, 3, heightSpacing);
             gridLayout.Add(tile);
         }
 
