@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using System;
 using UnityEngine;
 
 public class TimerComponent : MonoBehaviour
@@ -64,7 +61,6 @@ public class TimerComponent : MonoBehaviour
 
         Clockprintout = string.Format("{0:00}:{1:00}", minutes, seconds);
         Gametime.text = Clockprintout;
-        //Debug.Log(string.Format("{0:00}:{1:00}", minutes, seconds));
     }
 
     void OnTimerFinish()

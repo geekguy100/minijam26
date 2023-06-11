@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Light Control Interactable.meta
+guid: 3f7ba7e1ec3cb304397bc85a54b057d7
+folderAsset: yes
+========
 guid: 05daa5e0bf7fd24479940822002c2e8a
+>>>>>>>> develop:Assets/Scenes/Ship Behavior Test Scene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -9,7 +9,6 @@ public class RaycastInteractor : MonoBehaviour
     private Interactor interactor;
 
     [SerializeField] private Transform raycastOrigin;
-    [SerializeField] private LayerMask whatIsInteractable;
     [SerializeField] private float interactionDistance;
 
     private void Awake()
@@ -27,19 +26,12 @@ public class RaycastInteractor : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * 10f, Color.red);
         
         // If we hit an interactable, assign it if it is not the one we already have assigned to us.
-        if (Physics.Raycast(ray, out RaycastHit hitInfo, interactionDistance, whatIsInteractable))
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, interactionDistance, interactor.WhatIsInteractable))
         {
-            GameObject hitTransform = hitInfo.transform.gameObject;
+            GameObject hitGameObject = hitInfo.transform.gameObject;
             
-            // Do not re-assign this interactable again.
-            if (interactor.MatchesInteractable(hitTransform))
+            if (!hitGameObject.TryGetComponent(out IInteractable interactable))
                 return;
-            
-            if (!hitTransform.TryGetComponent(out IInteractable interactable))
-            {
-                Debug.LogWarning("[RaycastInteractor]: " + hitTransform.name + " has no IInteractable component but is on the interactable layer...");
-                return;
-            }
             
             interactor.AssignInteractable(interactable);
         }
