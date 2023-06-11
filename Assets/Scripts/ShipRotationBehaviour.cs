@@ -23,6 +23,7 @@ public class ShipRotationBehaviour : MonoBehaviour
     
     private IEnumerator ChangeShipDirection(Ship ship)
     {
+        print("Starting change ship direction");
         Transform shipTransform = ship.transform;
         Vector2 tilePos = transform.position.ToVector2();
         

@@ -33,9 +33,6 @@ public class Ship : MonoBehaviour
         currentDirection = transform.forward.ToVector2();
         rotationVector = Vector2.Lerp(currentDirection, targetDirection, rotateSpeed * Time.deltaTime);
         transform.Rotate(Vector3.up, Vector2.SignedAngle(currentDirection, rotationVector));
-
-        TESTFUNCTION();
-        
     }
 
     private void TESTFUNCTION()
@@ -65,17 +62,17 @@ public class Ship : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+    
     /// <summary>
     /// Signals the ship to change to a specified direction
     /// </summary>
     /// <param name="dir"></param> limited range of -1,1
     public void OnDirectionChange(Vector2 dir)
     {
-        if(targetDirection.magnitude != 1) { Debug.Log("Invalid entry for OnDirectionChange"); return;  }
         if(targetDirection == dir) { return;  } //Ship already heading in that direction
         if((targetDirection * -1) == dir) { return; } // Signalling ship to reverse to previous direction, does nothing so far
 
-        targetDirection = dir;
+        targetDirection = dir.normalized;
     }
 
     /// <summary>
