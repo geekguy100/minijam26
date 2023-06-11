@@ -46,6 +46,7 @@ public class GridField : MonoBehaviour
             tile.AssignPosition(coordinate);
 
             tile.transform.position = (new Vector2(coordinate.x * widthSpacing, coordinate.y * heightSpacing)).ToVector3();
+            tile.transform.localScale = new Vector3(widthSpacing, 3, heightSpacing);
             gridLayout.Add(tile);
         }
 

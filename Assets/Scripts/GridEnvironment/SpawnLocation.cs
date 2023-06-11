@@ -14,6 +14,7 @@ public class SpawnLocation : MonoBehaviour
     public void ConfigureShip(Ship ship, Vector2 direction)
     {
         ship.transform.position = transform.position;
+        ship.transform.Translate(0, 2, 0);
         ship.AssignDirection(direction);
     }
 
