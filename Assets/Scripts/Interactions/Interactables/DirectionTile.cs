@@ -27,7 +27,7 @@ public class DirectionTile : MonoBehaviour, IInteractable
         spriteRenderer = directionIndication.gameObject.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = data.ArrowSprite;
 
-        meshRenderer.enabled = false;
+        meshRenderer.enabled = true;
         spriteRenderer.enabled = false;
         
         shaker.Channel = -1;
@@ -46,7 +46,7 @@ public class DirectionTile : MonoBehaviour, IInteractable
     #region Assignment
     public void OnAssigned()
     {
-        meshRenderer.enabled = true;
+        // meshRenderer.enabled = true;
         spriteRenderer.enabled = true;
 
         shaker.Channel = 0;
@@ -59,7 +59,7 @@ public class DirectionTile : MonoBehaviour, IInteractable
     {
         shaker.Channel = -1;
 
-        meshRenderer.enabled = false;
+        // meshRenderer.enabled = false;
         spriteRenderer.enabled = false;
     }
     #endregion

@@ -43,7 +43,7 @@ public class LightControl : MonoBehaviour
     PlayerMovementComponent _playerMovement;
     public LightControlInterable lightControlnteractable;
 
-    [SerializeField] private float yOffset = 0f;
+    [SerializeField] private Transform towerView;
 
     Vector3 transformToSee;
     #endregion
@@ -64,9 +64,16 @@ public class LightControl : MonoBehaviour
     //TileDetectoionRange to set where the light ends
     #endregion
 
+    private Camera mainCam;
+    private int originalCullingMask;
+
+    [SerializeField] private LayerMask layersToShowWhenActive;
+
     private void Start()
     {
-
+        mainCam = Camera.main;
+        
+        originalCullingMask = mainCam.cullingMask;
         SetupLight();
     }
 
@@ -83,6 +90,11 @@ public class LightControl : MonoBehaviour
         //only steer if we are currently using the LightControlCamera
         if (lightvcam.enabled)
         {
+            if (mainCam.cullingMask == originalCullingMask)
+            {
+                mainCam.cullingMask |= layersToShowWhenActive;
+            }
+            
             ControlLightCamera();
         }
 
@@ -146,8 +158,8 @@ public class LightControl : MonoBehaviour
         {
             //look at transform from mouse to screen point
             Vector3 pos = Input.mousePosition;
-            pos.z = yOffset;
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos);
+            pos.z = towerView.localPosition.y;
+            Vector3 worldPos = mainCam.ScreenToWorldPoint(pos);
             
             transformToSee = worldPos;
 
@@ -177,6 +189,8 @@ public class LightControl : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Debug.Log("Exit Light control steering, switch back to player!");
+
+        mainCam.cullingMask = originalCullingMask;
     }
     #endregion
 
