@@ -15,7 +15,7 @@ TagManager:
   - Radar
   - Interactable
   - Tile
-  - Player Interactable
+  - TileInteractable
   - Ship
   - Boundary
   - 
