@@ -5,6 +5,7 @@ using UnityEngine;
 public class GridTile : MonoBehaviour
 {
     private Vector2 gridPosition;
+    public Vector2 GridPosition => gridPosition;
     private void Start()
     {
         
@@ -16,4 +17,6 @@ public class GridTile : MonoBehaviour
         gridPosition = coordinates;
 
     }
+
+
 }

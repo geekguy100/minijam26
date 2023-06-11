@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2293312259128063178}
   - component: {fileID: 5665882386956486764}
   m_Layer: 0
-  m_Name: GridTile
+  m_Name: RedTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &194185472338897475
 MeshFilter:
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5a8aa2b2ab007984ead9cee542f76574, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
