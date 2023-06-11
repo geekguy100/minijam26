@@ -1,10 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovementComponent : MonoBehaviour
 {
+    [SerializeField] private PlayerInteractorControls controls;
     //movement
     public float movementSpeed;
 
@@ -18,7 +16,7 @@ public class PlayerMovementComponent : MonoBehaviour
     float _yaw = 0, _pitch = 0;
     Quaternion _bodyStartOrientation;
     Quaternion _headStartOrientation;
-    Transform _head;
+    public Transform PlayerHead;
 
     private Vector3 vel;
     private Rigidbody rb;
@@ -33,10 +31,10 @@ public class PlayerMovementComponent : MonoBehaviour
     private void SetUp()
     {
         rb = GetComponent<Rigidbody>();
-        _head = GetComponentInChildren<Camera>().transform;
+        //_head = GetComponentInChildren<Camera>().transform;
 
         _bodyStartOrientation = transform.localRotation;
-        _headStartOrientation = _head.transform.localRotation;
+        _headStartOrientation = PlayerHead.transform.localRotation;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -72,7 +70,7 @@ public class PlayerMovementComponent : MonoBehaviour
         var headRotation = Quaternion.AngleAxis(_pitch, Vector3.right);
 
         transform.localRotation = bodyRotation * _bodyStartOrientation;
-        _head.localRotation = headRotation * _headStartOrientation;
+        PlayerHead.localRotation = headRotation * _headStartOrientation;
     }
 
     private void DoMovement()
