@@ -7,6 +7,7 @@ public class ShipGoal : MonoBehaviour
     [SerializeField] private LayerMask shipLayer;
 
     private Team colorTeam;
+    public Team Team => colorTeam;
     public Action<Ship,ShipGoal> OnGoalSuccess;
     //public UnityEvent OnGoalFailed;
 
