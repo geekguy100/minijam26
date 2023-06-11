@@ -4,22 +4,22 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(GridField))]
 public class ShipSpawner : MonoBehaviour
 {
     [SerializeField]
     private int minGoalDistance;
     [SerializeField]
     private GameObject shipObject;
-    public Material greenTestMat;
-    public Material redTestMat;
-
-    GridField grid;
     private List<SpawnLocation> shipSpawners;
     private List<int> validGoalIndexes;
 
+    GridField grid;
+    ShipScoringManager scoreSystem;
     private void Awake()
     {
         grid = GetComponent<GridField>();
+        scoreSystem = GetComponent<ShipScoringManager>();
         grid.onPopulationComplete.AddListener(ProcessScoreGridElements);
         shipSpawners = new List<SpawnLocation>();
     }
@@ -105,7 +105,7 @@ public class ShipSpawner : MonoBehaviour
     /// <returns></returns>
     private List<int> FindGoalsWithinConstraints(Vector2 min, Vector2 max)
     {
-        if (min.x > max.x || min.y > max.y) { Debug.Log("Invalid Constraint Field, Min: " + min + " --- Max: " + max); return new List<int>(); }
+        if (min.x > max.x || min.y > max.y) { /*Debug.Log("Invalid Constraint Field");*/ return new List<int>(); }
         List<int> goalIndexes = new List<int>();
         Vector2 coordinate;
         foreach (int goalIndex in validGoalIndexes)
@@ -148,9 +148,24 @@ public class ShipSpawner : MonoBehaviour
     {
         Ship ship = Instantiate(shipObject).GetComponent<Ship>();
         SpawnLocation location = shipSpawners[Random.Range(0, shipSpawners.Count)];
-        //SpawnLocation location = shipSpawners[5];
-        GridTile goalTile = grid.GetTile(location.GetGoalIndex());
+
+        int idx = location.GetGoalIndex();
+        int loopCount = 0;
+        while (grid.GetTile(idx).GetComponent<ShipGoal>() != null)
+        {
+            //super scuffed way to break out of potential infinite loop
+            if(loopCount == 15)
+            {
+                Destroy(ship);
+                return;
+            }
+            idx = location.GetGoalIndex();
+            loopCount++;
+        }
+        GridTile goalTile = grid.GetTile(idx);
+        ShipGoal goal = goalTile.AddComponent<ShipGoal>();
         GridTile startTile = location.GetComponent<GridTile>();
+        
 
         //TODO:update initial direction
         Vector2 startPosition = startTile.GridPosition;
@@ -163,11 +178,10 @@ public class ShipSpawner : MonoBehaviour
 
         location.ConfigureShip(ship.GetComponent<Ship>(), direction);
 
-
+        scoreSystem.AddShipGoalPair(ship, goal);
+        
         //location.GetGoalIndex();
         //Colors for testing
-        goalTile.GetComponent<MeshRenderer>().material = redTestMat;
-        location.GetComponent<MeshRenderer>().material = greenTestMat;
-        ship.GetComponent<MeshRenderer>().material = redTestMat;
+
     }
 }
