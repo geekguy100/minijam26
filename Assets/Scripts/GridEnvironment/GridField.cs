@@ -39,6 +39,10 @@ public class GridField : MonoBehaviour
     [ContextMenu("Generate Field")]
     private void GenerateField()
     {
+        Vector3 startingPos = new(-widthSpacing * gridWidth / 2, 0, startingPos.z = -heightSpacing * gridHeight / 2);
+        transform.position = startingPos;
+        
+        
         gridLayout = new List<GridTile>();
         GridTile tile;
         //
