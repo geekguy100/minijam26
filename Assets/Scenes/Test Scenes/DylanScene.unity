@@ -195,6 +195,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!20 &407951561 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4260591811310260248, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
+  m_PrefabInstance: {fileID: 848144372800063639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &665600474
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +874,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: db35e4e2f17fdf44aac08626cacf4957, type: 3}
   - {fileID: 8300000, guid: 9e4d58cb24983ee4b8fa398430dcd390, type: 3}
   - {fileID: 8300000, guid: 34ca99d75ceb3ae4582083a2a40a9a4d, type: 3}
-  - {fileID: 8300000, guid: 34ca99d75ceb3ae4582083a2a40a9a4d, type: 3}
+  - {fileID: 8300000, guid: 463a88ae98194e04e9cbbaac20f41a85, type: 3}
+  RadioStaticChange: {fileID: 8300000, guid: 2a831bd0d096a83418b835883b0321ca, type: 3}
 --- !u!1 &1831224100 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4416570392313938481, guid: e93d4021e0e4c1c47a3e76e44cc71e1c, type: 3}
@@ -1007,6 +1013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StopwatchCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5025366964241814830, guid: e93d4021e0e4c1c47a3e76e44cc71e1c, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 407951561}
     - target: {fileID: 7665498586409322632, guid: e93d4021e0e4c1c47a3e76e44cc71e1c, type: 3}
       propertyPath: m_Pivot.x
       value: 0

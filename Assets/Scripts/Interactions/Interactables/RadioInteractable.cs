@@ -11,7 +11,7 @@ public class RadioInteractable : MonoBehaviour, IInteractable
     public List<AudioClip> Playlist;
     private int currentSong = 0;
 
-    AudioClip RadioStaticChange;
+    public AudioClip RadioStaticChange;
     //will handle music
     //interacting will play a radio static noise then play the next song in the list
 

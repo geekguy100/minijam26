@@ -58,6 +58,8 @@ public class LightControl : MonoBehaviour
     LineRenderer LightLR;
     Vector3 EndPos;
     public bool TurnOnLineR = false;
+    float speed = 0.01f;
+    float timeCount = 0.0f;
     //TileDetectoionRange to set where the light ends
     #endregion
 
@@ -136,8 +138,7 @@ public class LightControl : MonoBehaviour
         MouseLook();
     }
 
-    float speed = 0.01f;
-    float timeCount = 0.0f;
+    
     //getting and setting mouse look
     private void MouseLook()
     {
