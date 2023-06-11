@@ -20,8 +20,6 @@ public class Ship : MonoBehaviour
     [SerializeField] private float translationSpeed = 2f;
     [SerializeField] private float rotateSpeed = 5f;
     private Vector2 targetDirection = new Vector2(1, 0);
-    
-
     private Team team = Team.Grey;
 
     Vector3 translationVector;
@@ -34,12 +32,10 @@ public class Ship : MonoBehaviour
     
     #region Crash
     [Header("Crash Stats")]
+    public GameObject crashAsset;
     GridEnviornment currentTile;
     GridEnviornment prevTile;
     GameObject ctile;
-    public GameObject crashAsset;
-
-   // public float sinkSpeed = 5;
 
     public float yAltCheck = -3.5f;
     public Vector3 rotEulerAngleCheck;
@@ -282,7 +278,7 @@ public class Ship : MonoBehaviour
             //crashing = true;
 
         } else {
-            Debug.Log("Set Tile: " + tile.name);
+            //Debug.Log("Set Tile: " + tile.name);
             //tile is safe, set it as current tile. buisness as usual
             prevTile = currentTile;
             currentTile = tile;
@@ -305,25 +301,19 @@ public class Ship : MonoBehaviour
         //run event for failure
         onShipCrash?.Invoke(this);
 
-        //Destroy(this.gameObject);
-
         //for now disasble everything and lock it up
         this.gameObject.SetActive(false);
 
     }
 
-    
     void SinkMovement()
     {
         bool bypass = false;
 
-
         bool alt = this.transform.position.y >= yAltCheck;
-        bool rot = this.transform.localRotation.eulerAngles.x <= rotEulerAngleCheck.x;
         if (!bypass)
         {
             //check if we sunk far enough
-            
             if (alt)
             {
                 Vector3 sinkVec = sinkDirection * SinkAltSpeed * Time.deltaTime;
@@ -331,18 +321,9 @@ public class Ship : MonoBehaviour
                 Vector3 newRot = Vector3.Lerp(this.transform.localRotation.eulerAngles, rotEulerAngleCheck, CrashAngleSpeed * Time.deltaTime);
                 transform.rotation = Quaternion.Euler(newRot);
             }
-            //check if our small rotate is enough
-            
-            if (rot)
-            {
-                //currentDirection = transform.forward.ToVector2();
-               // Vector3 newRot = Vector3.Lerp(this.transform.localRotation.eulerAngles, rotEulerAngleCheck, CrashAngleSpeed * Time.deltaTime);
-                //transform.rotation = Quaternion.Euler(newRot);
-                
-            }
+
         } else {
             alt = true;
-            rot = true;
         }
        
 
