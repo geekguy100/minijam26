@@ -24,6 +24,7 @@ public class GridField : MonoBehaviour
     public int GridHeight => gridHeight;
     public float GridWidthSpacing => widthSpacing;
     public float GridHeightSpacing => heightSpacing;
+    public List<GridTile> GridLayout => gridLayout;
 
     public UnityEvent onPopulationComplete;
 
@@ -45,6 +46,7 @@ public class GridField : MonoBehaviour
             tile.AssignPosition(coordinate);
 
             tile.transform.position = (new Vector2(coordinate.x * widthSpacing, coordinate.y * heightSpacing)).ToVector3();
+            gridLayout.Add(tile);
         }
 
         onPopulationComplete?.Invoke();
@@ -71,5 +73,14 @@ public class GridField : MonoBehaviour
         int x = idx / gridHeight;
         int y = idx - x * gridHeight;
         return new Vector2(x, y);
+    }
+
+    public GridTile GetTile(int idx)
+    {
+        return gridLayout[idx];
+    }
+    public GridTile GetTile(Vector2 coordinate)
+    { 
+        return gridLayout[GetIndexFromCoordinate(coordinate)];
     }
 }
