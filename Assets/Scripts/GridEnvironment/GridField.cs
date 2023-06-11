@@ -16,6 +16,8 @@ public class GridField : MonoBehaviour
     private float widthSpacing = 5;
     [SerializeField]
     private float heightSpacing = 5;
+    [SerializeField]
+    private GameObject boundary;
 
     [SerializeField]
     private GameObject gridTileObject;
@@ -60,9 +62,33 @@ public class GridField : MonoBehaviour
             gridLayout.Add(tile);
         }
 
+        SetBoundingBox();
+
         onPopulationComplete?.Invoke();
     }
 
+    BoxCollider bound;
+    private void SetBoundingBox()
+    {
+        bound = Instantiate(boundary, transform).GetComponent<BoxCollider>();
+        bound.transform.position = new Vector3(-gridWidth/2, 0, (gridHeight / 2) * heightSpacing);
+        bound.size = new Vector3(.1f, 25, heightSpacing * gridHeight);
+
+
+        bound = Instantiate(boundary, transform).GetComponent<BoxCollider>();
+        bound.transform.position = new Vector3(gridWidth * widthSpacing + gridWidth/2, 0, (gridHeight / 2) * heightSpacing);
+        bound.size = new Vector3(.1f, 25, heightSpacing * gridHeight);
+
+
+        bound = Instantiate(boundary, transform).GetComponent<BoxCollider>();
+        bound.transform.position = new Vector3((gridWidth / 2) * widthSpacing, 0, -gridHeight / 2);
+        bound.size = new Vector3(widthSpacing * gridWidth, 25, .1f);
+
+
+        bound = Instantiate(boundary, transform).GetComponent<BoxCollider>();
+        bound.transform.position = new Vector3((gridWidth / 2) * widthSpacing, 0, gridHeight * heightSpacing + gridHeight/2);
+        bound.size = new Vector3(widthSpacing * gridWidth, 25, .1f);        
+    }
     /// <summary>
     /// Returns the index of the respective tile in gridLayout from a 2d (x,y) coordiante
     /// </summary>
