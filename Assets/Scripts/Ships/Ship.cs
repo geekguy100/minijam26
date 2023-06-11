@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+using UnityEngine.Events;
 
 public class Ship : MonoBehaviour
 {
@@ -15,6 +15,8 @@ public class Ship : MonoBehaviour
     Vector3 translationVector;
     Vector2 rotationVector;
     Vector2 currentDirection;
+
+    public UnityEvent onShipDestroyed;
     private void Update()
     {
         translationVector =  targetDirection.ToVector3() * translationSpeed * Time.deltaTime;
@@ -63,5 +65,16 @@ public class Ship : MonoBehaviour
         if((targetDirection * -1) == dir) { return; } // Signalling ship to reverse to previous direction, does nothing so far
 
         targetDirection = dir;
+    }
+
+    /// <summary>
+    /// Immediately changes the ship's direction
+    /// </summary>
+    /// <param name="dir"></param>
+    public void AssignDirection(Vector2 dir)
+    {
+        targetDirection = dir;
+        transform.Rotate(Vector3.up, Vector2.SignedAngle(transform.forward.ToVector2(), dir));
+        currentDirection = dir;
     }
 }
