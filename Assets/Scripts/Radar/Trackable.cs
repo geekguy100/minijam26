@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -6,6 +7,8 @@ public class Trackable : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private Transform originalParent;
+
+    private Vector3 tilePos;
 
     [SerializeField] private TrackableData data;
     [SerializeField] private Channel triggerPulseChannel;
@@ -36,6 +39,8 @@ public class Trackable : MonoBehaviour
     private void Pulse()
     {
         transform.SetParent(null);
+        transform.localPosition = tilePos;
+        
         LeanTween.value(gameObject, SetAlpha, 1f, 0f, data.displayTime).
             setEase(data.easingType).
             setOnComplete(() =>
@@ -43,6 +48,14 @@ public class Trackable : MonoBehaviour
                 transform.SetParent(originalParent);
                 transform.localPosition = Vector3.zero;
             });
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Tile"))
+            return;
+
+        tilePos = other.transform.position;
     }
 
     private void SetAlpha(float alpha)

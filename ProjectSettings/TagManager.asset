@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Tile
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,6 @@ TagManager:
   - Tile
   - Player Interactable
   - Ship
-  - 
-  - 
   - 
   - 
   - 
