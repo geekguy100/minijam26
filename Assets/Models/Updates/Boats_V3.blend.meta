@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: fba2e9844caa9234794e1f2e2317ec51
+guid: 0274b489111677944b5e4c4fa3fd9d9a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: fc609e67757eac449a14a28de4874a44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main color
+    second: {fileID: 2100000, guid: e77a298cc46516d4db8a259469e7a4f9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -93,7 +103,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
