@@ -227,9 +227,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationSpeed: 40
   rotateSpeed: 3
-  onShipDestroyed:
-    m_PersistentCalls:
-      m_Calls: []
+  currentTile: {fileID: 0}
+  prevTile: {fileID: 0}
+  crashAsset: {fileID: 1025157051033047400, guid: 82800ca07c02a1344aae6768493c1328, type: 3}
+  yAltCheck: -3.5
+  rotEulerAngleCheck: {x: 20, y: 0, z: 0}
+  ShipRadius: 4
+  CrashAngleSpeed: 0
+  SinkAltSpeed: 0
+  gizmosOn: 1
 --- !u!54 &5026818098812201683
 Rigidbody:
   m_ObjectHideFlags: 0
