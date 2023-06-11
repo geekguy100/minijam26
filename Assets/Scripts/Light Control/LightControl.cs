@@ -1,5 +1,6 @@
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class LightControl : MonoBehaviour
 {
@@ -41,6 +42,8 @@ public class LightControl : MonoBehaviour
     CinemachineVirtualCamera _playerCam;
     PlayerMovementComponent _playerMovement;
     public LightControlInterable lightControlnteractable;
+
+    [SerializeField] private float yOffset = 0f;
 
     Vector3 transformToSee;
     #endregion
@@ -136,44 +139,26 @@ public class LightControl : MonoBehaviour
         MouseLook();
     }
 
-    float speed = 0.01f;
-    float timeCount = 0.0f;
     //getting and setting mouse look
     private void MouseLook()
     {
         if (!LockCamera)
         {
             //look at transform from mouse to screen point
-            Vector3 mouse = Input.mousePosition;
-            Ray castPoint = Camera.main.ScreenPointToRay(mouse);
-            if (Physics.Raycast(castPoint, out RaycastHit hitInfo, Mathf.Infinity))
-            {
-                GameObject hitTransform = hitInfo.transform.gameObject;
-                //objectToMove.transform.position = hit.point;
-                transformToSee = hitInfo.point;
+            Vector3 pos = Input.mousePosition;
+            pos.z = yOffset;
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(pos);
+            
+            transformToSee = worldPos;
 
-                //tile check (might not need anymore TBD)
-                if (hitTransform.TryGetComponent(out GridTile Tile))
-                {
-                    //if raycast hits a tile (TO DO: overhaul this once we have more backend tile stuff ready)
-                    if (tileSelected != hitTransform.transform.gameObject)
-                    {
-                        tileSelected = hitTransform.transform.gameObject;
-                        tileActive = Tile;
-                        //TO DO: run event here maybe for on tile select
-                         //Debug.Log("Hit.");
-                    }
-                }
+            //make rotation
+            Vector3 relativePos = transformToSee - LightOrigin.position;
+            
+            Debug.DrawRay(LightOrigin.position, relativePos, Color.green);
 
-                //make rotation
-                Vector3 relativePos = transformToSee - LightOrigin.position;
-
-                // the second argument, upwards, defaults to Vector3.up
-                Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
-                LightOrigin.transform.rotation = Quaternion.Lerp(LightOrigin.rotation, rotation, timeCount * speed);
-                timeCount = timeCount + Time.deltaTime;
-
-            }
+            // the second argument, upwards, defaults to Vector3.up
+            Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+            LightOrigin.transform.rotation = Quaternion.Lerp(LightOrigin.rotation, rotation, Time.deltaTime * turnSpeed);
         }
 
         if(TurnOnLineR)
