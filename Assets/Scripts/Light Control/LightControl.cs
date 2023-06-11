@@ -26,30 +26,14 @@ public class LightControl : MonoBehaviour
     public GameObject _playerTemp;
     public bool InteractSimulate = false;
     [SerializeField] private PlayerInteractorControls controls;
-
-    //whatever direction we are currently facing, that should be the only visible area outside
-    //will have the fog of war be a seperate component?
-    //will read from this orientation to determine rotion of our cone for visibility
-    //may need more detail, could have the entire transform or rotation objs
-    public float currentOrientation;
-
-    //Camera _lightControlCamera;
     public CinemachineVirtualCamera lightvcam;
 
     //movement
     public float movementSpeed;
     //similar to character controller
     Quaternion _startOrientation;
-    private Vector3 _vel;
-    private Rigidbody _rb;
     [SerializeField]
     public float turnSpeed;// = 300.0f;
-    [SerializeField]
-    float _headUpperAngleLimit = 85f;
-    [SerializeField]
-    float _headLowerAngleLimit = -80.0f;
-    float _yaw = 0, _pitch = 0;
-   // public Transform LightTransform;
 
     public bool LockCamera = false;
 
@@ -57,6 +41,8 @@ public class LightControl : MonoBehaviour
     CinemachineVirtualCamera _playerCam;
     PlayerMovementComponent _playerMovement;
     public LightControlInterable lightControlnteractable;
+
+    Vector3 transformToSee;
     #endregion
 
     #region Tile Interact
@@ -66,7 +52,6 @@ public class LightControl : MonoBehaviour
     [SerializeField] private float TileDetectionRange;
     [SerializeField] private GameObject tileSelected;
     [SerializeField] private GridTile tileActive;
-    public GameObject raycasthit;
     #endregion
 
     #region Light Env
@@ -95,7 +80,6 @@ public class LightControl : MonoBehaviour
         //only steer if we are currently using the LightControlCamera
         if (lightvcam.enabled)
         {
-            currentOrientation = transform.rotation.y;
             ControlLightCamera();
         }
 
@@ -133,6 +117,9 @@ public class LightControl : MonoBehaviour
 
         _startOrientation = transform.localRotation;
         LockCamera = false;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void ControlLightCamera()
@@ -146,29 +133,48 @@ public class LightControl : MonoBehaviour
             ExitLightControlSteering();
         }
 
-        var mouseX = Input.GetAxisRaw("Mouse X");
-        var mouseY = Input.GetAxisRaw("Mouse Y");
-
-        _yaw += mouseX * turnSpeed;
-        _pitch -= mouseY * turnSpeed;
-        _pitch = Mathf.Clamp(_pitch, _headLowerAngleLimit, _headUpperAngleLimit);
-
         MouseLook();
     }
 
-    
+    float speed = 0.01f;
+    float timeCount = 0.0f;
     //getting and setting mouse look
     private void MouseLook()
     {
         if (!LockCamera)
         {
-            var bodyRotation = Quaternion.AngleAxis(_yaw, Vector3.up);
-            var headRotation = Quaternion.AngleAxis(_pitch, Vector3.right);
-            Quaternion rot = headRotation * bodyRotation * _startOrientation;
-            transform.localRotation = new Quaternion(rot.x, rot.y, 0, rot.w);
-        }
+            //look at transform from mouse to screen point
+            Vector3 mouse = Input.mousePosition;
+            Ray castPoint = Camera.main.ScreenPointToRay(mouse);
+            if (Physics.Raycast(castPoint, out RaycastHit hitInfo, Mathf.Infinity))
+            {
+                GameObject hitTransform = hitInfo.transform.gameObject;
+                //objectToMove.transform.position = hit.point;
+                transformToSee = hitInfo.point;
 
-        AimLightRaycastCheck();
+                //tile check (might not need anymore TBD)
+                if (hitTransform.TryGetComponent(out GridTile Tile))
+                {
+                    //if raycast hits a tile (TO DO: overhaul this once we have more backend tile stuff ready)
+                    if (tileSelected != hitTransform.transform.gameObject)
+                    {
+                        tileSelected = hitTransform.transform.gameObject;
+                        tileActive = Tile;
+                        //TO DO: run event here maybe for on tile select
+                         //Debug.Log("Hit.");
+                    }
+                }
+
+                //make rotation
+                Vector3 relativePos = transformToSee - LightOrigin.position;
+
+                // the second argument, upwards, defaults to Vector3.up
+                Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+                LightOrigin.transform.rotation = Quaternion.Lerp(LightOrigin.rotation, rotation, timeCount * speed);
+                timeCount = timeCount + Time.deltaTime;
+
+            }
+        }
 
         if(TurnOnLineR)
             MoveLightBeam();
@@ -183,54 +189,10 @@ public class LightControl : MonoBehaviour
         _playerCam.enabled = true;
         _playerCam.gameObject.SetActive(true);
         _player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Debug.Log("Exit Light control steering, switch back to player!");
     }
-    #endregion
-
-    #region Tile Selection
-    //while we are active, we are checking what tile we are raycasting to
-    void AimLightRaycastCheck()
-    {
-        Ray ray = new Ray(LightOrigin.position, LightOrigin.forward);
-
-        Debug.DrawRay(ray.origin, ray.direction * 60f, Color.yellow);
-
-        // If we hit an interactable, assign it if it is not the one we already have assigned to us.
-        if (Physics.Raycast(ray, out RaycastHit hitInfo, TileDetectionRange))
-        {
-            GameObject hitTransform = hitInfo.transform.gameObject;
-            if (hitInfo.transform.gameObject != this.gameObject)
-            {
-                //check if its tile
-                raycasthit = hitInfo.transform.gameObject;
-                if (hitTransform.TryGetComponent(out GridTile Tile))
-                {
-                    //if raycast hits a tile (TO DO: overhaul this once we have more backend tile stuff ready)
-                    if (tileSelected != hitTransform.transform.gameObject)
-                    {
-                        tileSelected = hitTransform.transform.gameObject;
-                        tileActive = Tile;
-                        //TO DO: run event here maybe for on tile select
-                       // Debug.Log("Hit.");
-
-                    }
-                }
-                else
-                {
-                    //Debug.LogWarning("[Raycast Light Control]: " + hitTransform.name + " has no GridTile component...");
-                    return;
-                }
-            }
-        } else if(tileSelected)
-        {
-            //TO DO: deselect tile (turn off highlight or whatever)
-
-
-            //unassign the tile selected
-            tileSelected = null;
-        }
-    }
-
     #endregion
 
     #region Light Component
