@@ -8,12 +8,20 @@ public class ShipScoringManager : MonoBehaviour
 {
     [SerializeField]
     public List<Material> teamColors;
+
+    private Dictionary<Team, List<ShipGoal>> teamGoals;
     GridField grid;
 
     public int TESTSCORE = 0;
     private void Awake()
     {
         grid = GetComponent<GridField>();
+        teamGoals = new Dictionary<Team, List<ShipGoal>>();
+        foreach(Team team in System.Enum.GetValues(typeof(Team)))
+        {
+            teamGoals.Add(team, new List<ShipGoal>());
+        }
+
     }
 
     public void AddShipGoalPair(Ship ship, ShipGoal goal)
@@ -21,24 +29,29 @@ public class ShipScoringManager : MonoBehaviour
         Team team = (Team)Random.Range(1, 4);
         ship.AssignTeam(team);
         goal.AssignTeam(team);
+        teamGoals[team].Add(goal);
         goal.OnGoalSuccess+= ProcessGoalCompletion;
-
+        ship.onShipFailed += RemoveGoal;
 
         ship.AssignMaterial(teamColors[(int)team]);
         goal.AssignMaterial(teamColors[(int)team]);
+        ship.FadeIn();
     }
 
-    private void RemoveShipGoalPair(Ship ship, ShipGoal goal)
+    private void RemoveGoal(Ship ship)
     {
+        ShipGoal goal = teamGoals[ship.Team][Random.Range(0, teamGoals[ship.Team].Count)];
+        teamGoals[goal.Team].Remove(goal);
         goal.AssignMaterial(teamColors[0]);
         goal.RemoveGoal();
     }
-
     private void ProcessGoalCompletion(Ship ship,ShipGoal goal)
     {
         IncrementScore(1);
-        ship.DestroyShip();
 
+        ship.StopShip();
+
+        teamGoals[goal.Team].Remove(goal);
         goal.AssignMaterial(teamColors[0]);
         goal.RemoveGoal();
     }
