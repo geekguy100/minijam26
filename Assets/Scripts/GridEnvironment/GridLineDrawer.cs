@@ -18,6 +18,7 @@ public class GridLineDrawer : MonoBehaviour
         gridField.onPopulationComplete.RemoveListener(Populate);
     }
 
+    [ContextMenu("Populate")]
     private void Populate()
     {
         float height = gridField.GridHeight * gridField.GridHeightSpacing;
