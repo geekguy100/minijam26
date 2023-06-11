@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be321c8e128c724cad8b36a9cf9e409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minGoalDistance: 14
+  minGoalDistance: 7
   shipObject: {fileID: 5250631786135206592, guid: da36c974fb40a064aa1bdcaf788e513c, type: 3}
   greenTestMat: {fileID: 2100000, guid: 471e0c0ca7136d4429b82d5031313222, type: 2}
   redTestMat: {fileID: 2100000, guid: 5a8aa2b2ab007984ead9cee542f76574, type: 2}

@@ -89,8 +89,10 @@ public class ShipSpawner : MonoBehaviour
     private void AssignShipGoals(SpawnLocation spawner)
     {
         Vector2 gridPosition = spawner.GetComponent<GridTile>().GridPosition;
-        Vector2 minCoordinate = new Vector2(gridPosition.x - minGoalDistance, gridPosition.y - minGoalDistance);
-        Vector3 maxCoordinate = new Vector2(gridPosition.x + minGoalDistance, gridPosition.y + minGoalDistance);
+        Vector2 minCoordinate = new Vector2(Mathf.Clamp(gridPosition.x - minGoalDistance, 0, grid.GridWidth - 1), 
+                                            Mathf.Clamp(gridPosition.y - minGoalDistance, 0, grid.GridHeight - 1));
+        Vector3 maxCoordinate = new Vector2(Mathf.Clamp(gridPosition.x + minGoalDistance, 0, grid.GridWidth - 1),
+                                            Mathf.Clamp(gridPosition.y + minGoalDistance, 0, grid.GridHeight - 1));
         spawner.AssignGoals(FindGoalsOutsideConstraints(minCoordinate, maxCoordinate));
     }
 
@@ -103,7 +105,7 @@ public class ShipSpawner : MonoBehaviour
     /// <returns></returns>
     private List<int> FindGoalsWithinConstraints(Vector2 min, Vector2 max)
     {
-        if (min.x >= max.x || min.y >= max.y) { Debug.Log("Invalid Constraint Field"); return new List<int>(); }
+        if (min.x > max.x || min.y > max.y) { Debug.Log("Invalid Constraint Field, Min: " + min + " --- Max: " + max); return new List<int>(); }
         List<int> goalIndexes = new List<int>();
         Vector2 coordinate;
         foreach (int goalIndex in validGoalIndexes)
@@ -134,7 +136,7 @@ public class ShipSpawner : MonoBehaviour
         goalIndexes.AddRange(FindGoalsWithinConstraints(new Vector2(max.x + 1, 0), new Vector2(grid.GridWidth - 1, grid.GridHeight - 1)));
 
         goalIndexes.AddRange(FindGoalsWithinConstraints(new Vector2(min.x, 0), new Vector2(max.x, min.y - 1)));
-        goalIndexes.AddRange(FindGoalsWithinConstraints(new Vector2(min.x, min.y + 1), new Vector2(max.x, grid.GridHeight - 1)));
+        goalIndexes.AddRange(FindGoalsWithinConstraints(new Vector2(min.x, max.y + 1), new Vector2(max.x, grid.GridHeight - 1)));
         return goalIndexes;
     }
 
@@ -146,6 +148,7 @@ public class ShipSpawner : MonoBehaviour
     {
         Ship ship = Instantiate(shipObject).GetComponent<Ship>();
         SpawnLocation location = shipSpawners[Random.Range(0, shipSpawners.Count)];
+        //SpawnLocation location = shipSpawners[5];
         GridTile goalTile = grid.GetTile(location.GetGoalIndex());
         GridTile startTile = location.GetComponent<GridTile>();
 
