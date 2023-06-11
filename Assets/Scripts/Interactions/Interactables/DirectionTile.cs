@@ -50,7 +50,9 @@ public class DirectionTile : MonoBehaviour, IInteractable
         spriteRenderer.enabled = true;
 
         shaker.Channel = 0;
-        feedbackPlayer.PlayFeedbacks();
+        
+        if (!ReferenceEquals(feedbackPlayer, null))
+            feedbackPlayer.PlayFeedbacks();
     }
     
     public void OnUnassigned()
