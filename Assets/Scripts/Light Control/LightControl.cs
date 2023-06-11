@@ -125,7 +125,7 @@ public class LightControl : MonoBehaviour
     void ControlLightCamera()
     {
         //TO DO: may add enter or remove it entirely
-        if(Input.GetKey(KeyCode.KeypadEnter) || Input.GetKeyDown(controls.ExitLightKey))
+        if(Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey(controls.ExitLightKey))
         {
             //for now if they see somewhere they want to keep looking at, press enter
             // will definately need to change it

@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 7364921800803022983}
   - component: {fileID: 5427946757443250982}
   - component: {fileID: 2577727620081349345}
+  - component: {fileID: 229998746645609575}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -481,7 +482,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4712c8b6dd0c434caa3b644b8810c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controls: {fileID: 11400000, guid: db61dbd9eec0442469a8128bdec3538e, type: 2}
   movementSpeed: 7
   turnSpeed: 5
   _headUpperAngleLimit: 85
@@ -576,6 +576,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controls: {fileID: 11400000, guid: db61dbd9eec0442469a8128bdec3538e, type: 2}
+--- !u!114 &229998746645609575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7249582457643448693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b97b66321dc5d92448db96e9ee6cc12d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controls: {fileID: 11400000, guid: 054a7f9b68b5b40488fd4ef129eb11cc, type: 2}
+  StopwatchUI: {fileID: 0}
 --- !u!1 &8703429965049464933
 GameObject:
   m_ObjectHideFlags: 0
