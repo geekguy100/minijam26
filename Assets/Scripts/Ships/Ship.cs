@@ -19,7 +19,10 @@ public class Ship : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float translationSpeed = 2f;
     [SerializeField] private float rotateSpeed = 5f;
+    [SerializeField] private float difficultyValue = 1f;
     private Vector2 targetDirection = new Vector2(1, 0);
+
+    public float DifficultyValue => difficultyValue;
     private Team team = Team.Grey;
 
     Vector3 translationVector;
@@ -59,6 +62,10 @@ public class Ship : MonoBehaviour
         float zVal = transform.localEulerAngles.z + UnityEngine.Random.Range(-10.0f, 10.0f);
         rotEulerAngleCheck = new Vector3(xVal, yVal, zVal);
     }
+    private bool spawning = true;
+    public Action<Ship> onShipOutOfBounds;
+    public Action<Ship> onShipDestroy;
+
 
     private void Update()
     {
@@ -111,6 +118,7 @@ public class Ship : MonoBehaviour
     }
     public void DestroyShip()
     {
+        onShipDestroy?.Invoke(this);
         Destroy(this.gameObject);
     }
 
@@ -173,18 +181,20 @@ public class Ship : MonoBehaviour
 
     public void OnOutOfBounds()
     {
-        StartCoroutine(FadeOutSequence());
-        StartCoroutine(OutOfBoundsSequence());
+        //StartCoroutine(FadeOutSequence());
+        //StartCoroutine(OutOfBoundsSequence());
+        onShipOutOfBounds?.Invoke(this);
     }
 
     private IEnumerator OutOfBoundsSequence()
     {
+
         MeshRenderer[] renderGroup = GetComponentsInChildren<MeshRenderer>();
         while (renderGroup[0].material.color.a > 0)
         {
             yield return null;
         }
-        onShipFailed?.Invoke(this);
+        
     }
 
 

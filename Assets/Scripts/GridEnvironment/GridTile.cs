@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GridTile : MonoBehaviour
 {
-    private Vector2 gridPosition;
+    //IDK WHY YET BUT MAKING THIS PUBLIC PREVENTS VALUE CHANGES ON PLAY
+    public Vector2 gridPosition;
     public Vector2 GridPosition => gridPosition;
     private void Start()
     {
