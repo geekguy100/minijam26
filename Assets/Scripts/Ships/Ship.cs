@@ -16,10 +16,11 @@ public enum Team
 }
 public class Ship : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private float translationSpeed = 2f;
     [SerializeField] private float rotateSpeed = 5f;
     private Vector2 targetDirection = new Vector2(1, 0);
-    private Vector3 sinkDirection = new Vector3(0, -1, 0);
+    
 
     private Team team = Team.Grey;
 
@@ -30,29 +31,28 @@ public class Ship : MonoBehaviour
     //was true
     private bool spawning = false;
     public Action<Ship> onShipFailed;
-
+    
     #region Crash
     [Header("Crash Stats")]
-    public GridEnviornment currentTile;
-    public GridEnviornment prevTile;
+    GridEnviornment currentTile;
+    GridEnviornment prevTile;
     GameObject ctile;
     public GameObject crashAsset;
 
    // public float sinkSpeed = 5;
 
-    public float yAltCheck = -60.0f;
+    public float yAltCheck = -3.5f;
     public Vector3 rotEulerAngleCheck;
     bool sinkMovementActive = false;
     public float ShipRadius = 4;
-
+    private Vector3 sinkDirection = new Vector3(0, -1, 0);
     public float CrashAngleSpeed;
     public float SinkAltSpeed;
-
+    public Action<Ship> onShipCrash;
     #endregion
 
     [Header("Debug Gizmos")]
     public bool gizmosOn = true;
-
 
     void Start()
     {
@@ -303,7 +303,7 @@ public class Ship : MonoBehaviour
         currentTile.SetNewHazard(crashAsset);
 
         //run event for failure
-        onShipFailed?.Invoke(this);
+        onShipCrash?.Invoke(this);
 
         //Destroy(this.gameObject);
 

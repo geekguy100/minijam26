@@ -32,7 +32,7 @@ public class ShipScoringManager : MonoBehaviour
         teamGoals[team].Add(goal);
         goal.OnGoalSuccess+= ProcessGoalCompletion;
         ship.onShipFailed += RemoveGoal;
-
+        ship.onShipCrash += RemoveGoal;
         ship.AssignMaterial(teamColors[(int)team]);
         goal.AssignMaterial(teamColors[(int)team]);
         ship.FadeIn();
