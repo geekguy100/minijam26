@@ -4,7 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Events;
-
+using System;
+using System.Runtime.CompilerServices;
 
 public enum Team
 {
@@ -24,19 +25,28 @@ public class Ship : MonoBehaviour
     Vector3 translationVector;
     Vector2 rotationVector;
     Vector2 currentDirection;
-    public UnityEvent onShipDestroyed;
+
+    private bool spawning = true;
+    public Action<Ship> onShipFailed;
     private void Update()
     {
-        translationVector =  targetDirection.ToVector3() * translationSpeed * Time.deltaTime;
-        transform.Translate(translationVector, Space.World);
-
-        currentDirection = transform.forward.ToVector2();
-        rotationVector = Vector2.Lerp(currentDirection, targetDirection, rotateSpeed * Time.deltaTime);
-        transform.Rotate(Vector3.up, Vector2.SignedAngle(currentDirection, rotationVector));
-
-        TESTFUNCTION();
         
+
+        if (!spawning)
+        {
+            currentDirection = transform.forward.ToVector2();
+            rotationVector = Vector2.Lerp(currentDirection, targetDirection, rotateSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up, Vector2.SignedAngle(currentDirection, rotationVector));
+
+            translationVector = targetDirection.ToVector3() * translationSpeed * Time.deltaTime;
+            transform.Translate(translationVector, Space.World);
+
+            TESTFUNCTION();
+        }
     }
+
+
+
 
     private void TESTFUNCTION()
     {
@@ -65,6 +75,81 @@ public class Ship : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
+    public void FadeIn()
+    {
+        spawning = true;
+        MeshRenderer[] renderGroup = GetComponentsInChildren<MeshRenderer>();
+        if (renderGroup.Length <= 0) { return; }
+        foreach (MeshRenderer render in renderGroup)
+        {
+            Color shipColor = render.material.color;
+            shipColor = new Color(shipColor.r, shipColor.g, shipColor.b, 0);
+            render.material.color = shipColor;
+        }
+        StartCoroutine(FadeInSequence());
+    }
+    public void FadeOut()
+    {
+        MeshRenderer[] renderGroup = GetComponentsInChildren<MeshRenderer>();
+        if(renderGroup.Length <= 0) { return; }
+        StartCoroutine(FadeOutSequence());
+    }
+
+    private IEnumerator FadeOutSequence()
+    {
+        MeshRenderer[] renderGroup = GetComponentsInChildren<MeshRenderer>();
+        while (renderGroup[0].material.color.a > 0)
+        {
+            foreach(MeshRenderer render in renderGroup)
+            {
+                Color shipColor = render.material.color;
+                float fadeAmount = shipColor.a - (.75f * Time.deltaTime);
+
+                shipColor = new Color(shipColor.r, shipColor.g, shipColor.b, fadeAmount);
+                render.material.color = shipColor;
+            }
+            yield return null;
+        }
+
+        DestroyShip();
+    }
+
+    private IEnumerator FadeInSequence()
+    {
+        MeshRenderer[] renderGroup = GetComponentsInChildren<MeshRenderer>();
+        while (renderGroup[0].material.color.a < 1)
+        {
+            foreach (MeshRenderer render in renderGroup)
+            {
+                Color shipColor = render.material.color;
+                float fadeAmount = shipColor.a + (1f * Time.deltaTime);
+
+                shipColor = new Color(shipColor.r, shipColor.g, shipColor.b, fadeAmount);
+                render.material.color = shipColor;
+            }
+            yield return null;
+        }
+        spawning = false;
+    }
+
+    public void OnOutOfBounds()
+    {
+        StartCoroutine(FadeOutSequence());
+        StartCoroutine(OutOfBoundsSequence());
+    }
+
+    private IEnumerator OutOfBoundsSequence()
+    {
+        MeshRenderer[] renderGroup = GetComponentsInChildren<MeshRenderer>();
+        while (renderGroup[0].material.color.a > 0)
+        {
+            yield return null;
+        }
+        onShipFailed?.Invoke(this);
+    }
+
+
     /// <summary>
     /// Signals the ship to change to a specified direction
     /// </summary>
@@ -85,8 +170,15 @@ public class Ship : MonoBehaviour
     public void AssignDirection(Vector2 dir)
     {
         targetDirection = dir;
-        transform.Rotate(Vector3.up, Vector2.SignedAngle(transform.forward.ToVector2(), dir));
-        currentDirection = dir;
+        
+        float rotVal = -90 * dir.x;
+        if(dir.y == 1) { rotVal = 180; }
+        // 90  =  1,  0 
+        // 180 =  0,  1
+        // 270 = -1,  0
+        // 360 =  0, -1
+
+        transform.rotation = Quaternion.Euler(new Vector3(0, rotVal, 0));
     }
 
     public void AssignTeam(Team color)
@@ -94,6 +186,11 @@ public class Ship : MonoBehaviour
         team = color;
     }
 
+    public void StopShip()
+    {
+        translationSpeed = 0;
+        FadeOut();
+    }
     public void AssignMaterial(Material mat)
     {
         GetComponent<MeshRenderer>().material = mat;
