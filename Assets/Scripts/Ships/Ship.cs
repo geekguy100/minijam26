@@ -28,7 +28,8 @@ public class Ship : MonoBehaviour
     Vector3 translationVector;
     Vector2 rotationVector;
     Vector2 currentDirection;
-
+    public Action<Ship> onShipOutOfBounds;
+    public Action<Ship> onShipDestroy;
     //was true
     private bool spawning = false;
     public Action<Ship> onShipFailed;
@@ -36,7 +37,7 @@ public class Ship : MonoBehaviour
     #region Crash
     [Header("Crash Stats")]
     public GameObject crashAsset;
-    GridEnviornment currentTile;
+    public GridEnviornment currentTile;
     GridEnviornment prevTile;
     GameObject ctile;
 
@@ -53,18 +54,7 @@ public class Ship : MonoBehaviour
     [Header("Debug Gizmos")]
     public bool gizmosOn = true;
 
-    void Start()
-    {
-        //setting -x rotation randomly
-        //other 2 can be ok
-        float xVal = transform.localEulerAngles.x + UnityEngine.Random.Range(0, -30f);
-        float yVal = transform.localEulerAngles.y + UnityEngine.Random.Range(-10f, 10f);
-        float zVal = transform.localEulerAngles.z + UnityEngine.Random.Range(-10.0f, 10.0f);
-        rotEulerAngleCheck = new Vector3(xVal, yVal, zVal);
-    }
-    private bool spawning = true;
-    public Action<Ship> onShipOutOfBounds;
-    public Action<Ship> onShipDestroy;
+
 
 
     private void Update()
@@ -81,17 +71,23 @@ public class Ship : MonoBehaviour
                 transform.Translate(translationVector, Space.World);
 
                 TESTFUNCTION();
+            }
 
-                CheckCollision();
-            }
-            else
-            {
-                SinkMovement();
-            }
         }
     }
 
+    void FixedUpdate()
+    {
+        if (!sinkMovementActive)
+        {
+            CheckCollision();
 
+        }
+        else
+        {
+            SinkMovement();
+        }
+    }
 
     private void TESTFUNCTION()
     {
@@ -247,20 +243,23 @@ public class Ship : MonoBehaviour
     //could use a sphere cast
     void CheckCollision()
     {
-        RaycastHit hit;
-        if (Physics.SphereCast(transform.position, ShipRadius, transform.forward, out hit, ShipRadius))
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, ShipRadius);
+        foreach (var hitCollider in hitColliders)
         {
-            //
-            if (LayerMask.LayerToName(hit.transform.gameObject.layer) == "TileInteractable" && 
-                hit.transform.TryGetComponent<GridEnviornment>(out GridEnviornment tile))
+            GameObject go = hitCollider.gameObject;
+
+            //Debug.Log("1: " + hitCollider.transform.name);
+            if (LayerMask.LayerToName(go.transform.gameObject.layer) == "TileInteractable" &&
+                go.transform.TryGetComponent<GridEnviornment>(out GridEnviornment tile))
             {
-                //
+                //Debug.Log("2: " + go.transform.name);
                 if (currentTile != tile && prevTile != tile)
                 {
-                   // Debug.Log(hit.transform.name);
+                    //Debug.Log("3: " + go.transform.name);
                     //have a new tile
                     //check if it is an obstacle
                     TileCheck(tile);
+                    return;
                 }
             }
         }
@@ -277,6 +276,14 @@ public class Ship : MonoBehaviour
         }
     }
 
+    Vector3 RandomAngle()
+    {
+        float xVal = transform.localEulerAngles.x + UnityEngine.Random.Range(0, -30f);
+        float yVal = transform.localEulerAngles.y + UnityEngine.Random.Range(-10f, 10f);
+        float zVal = transform.localEulerAngles.z + UnityEngine.Random.Range(-10.0f, 10.0f);
+        return new Vector3(xVal, yVal, zVal);
+    }
+
     void TileCheck(GridEnviornment tile)
     {
         //is this new tile an obstacle? do we need to crash?
@@ -285,10 +292,11 @@ public class Ship : MonoBehaviour
             //start sink sequence
             sinkMovementActive = true;
             Debug.Log(transform.gameObject.name + " Has hit an obstacle on tile " + tile.gameObject.name + "and is now crashing. nice job");
+            rotEulerAngleCheck = RandomAngle();
             //crashing = true;
 
         } else {
-            //Debug.Log("Set Tile: " + tile.name);
+            Debug.Log("Set Tile: " + tile.name);
             //tile is safe, set it as current tile. buisness as usual
             prevTile = currentTile;
             currentTile = tile;
