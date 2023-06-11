@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovementComponent : MonoBehaviour
 {
-    [SerializeField] private PlayerInteractorControls controls;
+    //[SerializeField] private PlayerInteractorControls controls;
     //movement
     public float movementSpeed;
 

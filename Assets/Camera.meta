@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Materials/DefaultBlue.mat.meta
+guid: efad7980c1745744b80e44d9fc2ee281
+NativeFormatImporter:
+========
+guid: bad3343ef48f5f94595a5600de9ea8dd
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> develop:Assets/Camera.meta
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
