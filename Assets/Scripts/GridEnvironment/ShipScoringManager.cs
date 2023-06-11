@@ -13,6 +13,9 @@ public class ShipScoringManager : MonoBehaviour
     GridField grid;
 
     public int TESTSCORE = 0;
+    public int crashes = 0;
+    public int outOfBounds = 0;
+
     private void Awake()
     {
         grid = GetComponent<GridField>();
@@ -31,19 +34,32 @@ public class ShipScoringManager : MonoBehaviour
         goal.AssignTeam(team);
         teamGoals[team].Add(goal);
         goal.OnGoalSuccess+= ProcessGoalCompletion;
-        ship.onShipFailed += RemoveGoal;
+        ship.onShipOutOfBounds += OnOutOfBounds;
 
         ship.AssignMaterial(teamColors[(int)team]);
         goal.AssignMaterial(teamColors[(int)team]);
         ship.FadeIn();
     }
 
+    private void OnOutOfBounds(Ship ship)
+    {
+        outOfBounds++;
+        RemoveGoal(ship);
+    }
+
+    private void OnCrash(Ship ship)
+    {
+        crashes++;
+        RemoveGoal(ship);
+    }
     private void RemoveGoal(Ship ship)
     {
         ShipGoal goal = teamGoals[ship.Team][Random.Range(0, teamGoals[ship.Team].Count)];
+
         teamGoals[goal.Team].Remove(goal);
         goal.AssignMaterial(teamColors[0]);
         goal.RemoveGoal();
+        ship.FadeOut();
     }
     private void ProcessGoalCompletion(Ship ship,ShipGoal goal)
     {
