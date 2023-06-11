@@ -10,9 +10,23 @@ public class ShipSpawner : MonoBehaviour
     [SerializeField]
     private int minGoalDistance;
     [SerializeField]
+    private float spawnTimer = 5;
+
+    [SerializeField]
     private GameObject shipObject;
     private List<SpawnLocation> shipSpawners;
     private List<int> validGoalIndexes;
+
+    [SerializeField]
+    private Transform shipParent;
+    [SerializeField]
+    private float difficulty;
+
+    private int spawnBatchSize = 1;
+    private float timeSinceSpawn = 0;
+    public List<Ship> activeShips;
+
+    public TimerComponent timeline;
 
     GridField grid;
     ShipScoringManager scoreSystem;
@@ -21,12 +35,65 @@ public class ShipSpawner : MonoBehaviour
         grid = GetComponent<GridField>();
         scoreSystem = GetComponent<ShipScoringManager>();
         grid.onPopulationComplete.AddListener(ProcessScoreGridElements);
+        activeShips = new List<Ship>();
         shipSpawners = new List<SpawnLocation>();
+        if (!grid.generateOnStart) { ProcessScoreGridElements(); }
+        timeline = FindObjectOfType<TimerComponent>(); // pls no
+
+        
     }
 
     private void Update()
     {
-        TESTspawnShipGoalPair();
+        CalculateLevelDifficulty();
+        CalculateShipSpawnFrequency();
+        //TESTspawnShipGoalPair();
+    }
+
+    private void CalculateLevelDifficulty()
+    {
+        difficulty = 3;
+        float quarterTime = timeline.StartTime / 4f;
+        if(timeline.TimeRemaining  < quarterTime)
+        {
+            difficulty = 10;
+            spawnBatchSize = 3;
+            spawnTimer = 1.5f;
+        }
+        else if(timeline.TimeRemaining < quarterTime * 3)
+        {
+            difficulty = 6;
+            spawnBatchSize = 2;
+            spawnTimer = 2f;
+        }
+        else
+        {
+            difficulty = 3;
+            spawnBatchSize = 1;
+            spawnTimer = 2.5f;
+        }
+        
+    }
+
+    private void CalculateShipSpawnFrequency()
+    {
+        timeSinceSpawn += Time.deltaTime;
+        if(timeSinceSpawn < spawnTimer) { return; }
+
+        float currentDifficulty = 0;
+        foreach(Ship ship in activeShips)
+        {
+            currentDifficulty += ship.DifficultyValue;
+        }
+        if(currentDifficulty < difficulty)
+        {
+            for(int idx = 0; idx < spawnBatchSize; idx++)
+            {
+                GenerateShipSpawn();
+            }
+            
+        }
+        timeSinceSpawn = 0;
     }
 
     private void TESTspawnShipGoalPair()
@@ -146,8 +213,13 @@ public class ShipSpawner : MonoBehaviour
     /// </summary>
     private void GenerateShipSpawn()
     {
-        Ship ship = Instantiate(shipObject).GetComponent<Ship>();
+        Ship ship = Instantiate(shipObject,shipParent).GetComponent<Ship>();
         SpawnLocation location = shipSpawners[Random.Range(0, shipSpawners.Count)];
+        ship.onShipDestroy += RemoveShip;
+
+
+        activeShips.Add(ship);
+
 
         int idx = location.GetGoalIndex();
         int loopCount = 0;
@@ -183,5 +255,10 @@ public class ShipSpawner : MonoBehaviour
         //location.GetGoalIndex();
         //Colors for testing
 
+    }
+
+    public void RemoveShip(Ship ship)
+    {
+        activeShips.Remove(ship);
     }
 }
