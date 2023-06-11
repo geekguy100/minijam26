@@ -158,7 +158,7 @@ public class LightControl : MonoBehaviour
         {
             //look at transform from mouse to screen point
             Vector3 pos = Input.mousePosition;
-            pos.z = towerView.localPosition.y;
+            pos.z = towerView.position.y;
             Vector3 worldPos = mainCam.ScreenToWorldPoint(pos);
             
             transformToSee = worldPos;
