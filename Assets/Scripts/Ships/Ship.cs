@@ -198,11 +198,10 @@ public class Ship : MonoBehaviour
     /// <param name="dir"></param> limited range of -1,1
     public void OnDirectionChange(Vector2 dir)
     {
-        if(targetDirection.magnitude != 1) { Debug.Log("Invalid entry for OnDirectionChange"); return;  }
         if(targetDirection == dir) { return;  } //Ship already heading in that direction
         if((targetDirection * -1) == dir) { return; } // Signalling ship to reverse to previous direction, does nothing so far
 
-        targetDirection = dir;
+        targetDirection = dir.normalized;
     }
 
     /// <summary>

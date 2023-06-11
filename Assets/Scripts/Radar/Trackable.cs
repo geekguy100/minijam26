@@ -29,6 +29,8 @@ public class Trackable : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalParent = transform.parent;
+        
+        tilePos = Vector3.one * -1000f;
     }
 
     private void Start()

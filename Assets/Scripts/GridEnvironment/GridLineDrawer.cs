@@ -18,8 +18,11 @@ public class GridLineDrawer : MonoBehaviour
         gridField.onPopulationComplete.RemoveListener(Populate);
     }
 
+    [ContextMenu("Populate")]
     private void Populate()
     {
+        transform.position = gridField.transform.position;
+        
         float height = gridField.GridHeight * gridField.GridHeightSpacing;
         float width = gridField.GridWidth * gridField.GridWidthSpacing;
 
@@ -27,7 +30,7 @@ public class GridLineDrawer : MonoBehaviour
         {
             Transform lineClone = Instantiate(linePrefab, transform).transform;
             
-            lineClone.localPosition = new Vector3(col * gridField.GridWidthSpacing - gridField.GridWidthSpacing / 2, 0, height / 2f);
+            lineClone.localPosition = new Vector3(col * gridField.GridWidthSpacing - gridField.GridWidthSpacing / 2, 0, height / 2f - gridField.GridHeightSpacing / 2f);
 
             Vector3 scale = Vector3.one;
             scale.z = height;
@@ -38,7 +41,7 @@ public class GridLineDrawer : MonoBehaviour
         {
             Transform lineClone = Instantiate(linePrefab, transform).transform;
             
-            lineClone.localPosition = new Vector3(width/2f, 0, row * gridField.GridHeightSpacing - gridField.GridHeightSpacing / 2);
+            lineClone.localPosition = new Vector3(width / 2f - gridField.GridWidthSpacing / 2f, 0, row * gridField.GridHeightSpacing - gridField.GridHeightSpacing / 2);
 
             Vector3 scale = Vector3.one;
             scale.x = width;
