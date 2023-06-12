@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -312,7 +313,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2189184}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2189187
 BoxCollider:
@@ -398,6 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -537,7 +538,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 14861615}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &14861618
 BoxCollider:
@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -762,7 +763,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 16382958}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &16382961
 BoxCollider:
@@ -848,6 +848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -987,7 +988,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 23499719}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &23499722
 BoxCollider:
@@ -1073,6 +1073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -1212,7 +1213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 30521560}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &30521563
 BoxCollider:
@@ -1508,6 +1508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -1647,7 +1648,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 40802247}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &40802250
 BoxCollider:
@@ -1733,6 +1733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -1872,7 +1873,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 43853305}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &43853308
 BoxCollider:
@@ -1958,6 +1958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -2097,7 +2098,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 60538002}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &60538005
 BoxCollider:
@@ -2183,6 +2183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -2322,7 +2323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 64233039}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &64233042
 BoxCollider:
@@ -2408,6 +2408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -2547,7 +2548,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 77040348}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &77040351
 BoxCollider:
@@ -2633,6 +2633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -2772,7 +2773,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 79817562}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &79817565
 BoxCollider:
@@ -2858,6 +2858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -2997,7 +2998,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 80662695}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &80662698
 BoxCollider:
@@ -3083,6 +3083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -3222,7 +3223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 82016128}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &82016131
 BoxCollider:
@@ -3308,6 +3308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -3447,7 +3448,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 84151403}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &84151406
 BoxCollider:
@@ -3533,6 +3533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -3672,7 +3673,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 95428303}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &95428306
 BoxCollider:
@@ -3758,6 +3758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -3897,7 +3898,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 100974083}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &100974086
 BoxCollider:
@@ -3983,6 +3983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -4122,7 +4123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 101632459}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &101632462
 BoxCollider:
@@ -4208,6 +4208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -4347,7 +4348,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 103226822}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &103226825
 BoxCollider:
@@ -4433,6 +4433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -4572,7 +4573,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 118890183}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &118890186
 BoxCollider:
@@ -4658,6 +4658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -4797,7 +4798,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 124711984}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &124711987
 BoxCollider:
@@ -4883,6 +4883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -5022,7 +5023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 145306631}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &145306634
 BoxCollider:
@@ -5108,6 +5108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -5247,7 +5248,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 173030949}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &173030952
 BoxCollider:
@@ -5333,6 +5333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -5472,7 +5473,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 180794463}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &180794466
 BoxCollider:
@@ -5558,6 +5558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -5697,7 +5698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 184342084}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &184342087
 BoxCollider:
@@ -5888,6 +5888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -6027,7 +6028,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 196890068}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &196890071
 BoxCollider:
@@ -6118,6 +6118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -6257,7 +6258,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 212528666}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &212528669
 BoxCollider:
@@ -6343,6 +6343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -6482,7 +6483,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 213733550}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &213733553
 BoxCollider:
@@ -6568,6 +6568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -6707,7 +6708,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 217237682}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &217237685
 BoxCollider:
@@ -6793,6 +6793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -6932,7 +6933,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 226876128}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &226876131
 BoxCollider:
@@ -7018,6 +7018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -7157,7 +7158,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 249335981}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &249335984
 BoxCollider:
@@ -7488,6 +7488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -7627,7 +7628,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 262794931}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &262794934
 BoxCollider:
@@ -7818,6 +7818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -7957,7 +7958,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 270694616}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &270694619
 BoxCollider:
@@ -8043,6 +8043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -8182,7 +8183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 276206703}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &276206706
 BoxCollider:
@@ -8268,6 +8268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -8407,7 +8408,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 288673411}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &288673414
 BoxCollider:
@@ -8493,6 +8493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -8632,7 +8633,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 293889859}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &293889862
 BoxCollider:
@@ -8901,6 +8901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -9040,7 +9041,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 311174929}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &311174932
 BoxCollider:
@@ -9126,6 +9126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -9265,7 +9266,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 314705035}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &314705038
 BoxCollider:
@@ -9456,6 +9456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -9595,7 +9596,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 320792206}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &320792209
 BoxCollider:
@@ -9681,6 +9681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -9820,7 +9821,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 326646038}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &326646041
 BoxCollider:
@@ -10011,6 +10011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -10150,7 +10151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 340239526}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &340239529
 BoxCollider:
@@ -10236,6 +10236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -10375,7 +10376,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 343585035}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &343585038
 BoxCollider:
@@ -10461,6 +10461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -10600,7 +10601,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 357783447}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &357783450
 BoxCollider:
@@ -10686,6 +10686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -10825,7 +10826,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 382508122}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &382508125
 BoxCollider:
@@ -10911,6 +10911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -11050,7 +11051,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 382961988}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &382961991
 BoxCollider:
@@ -11136,6 +11136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -11275,7 +11276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 383224652}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &383224655
 BoxCollider:
@@ -11361,6 +11361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -11500,7 +11501,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 384368011}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &384368014
 BoxCollider:
@@ -11586,6 +11586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -11725,7 +11726,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 392472998}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &392473001
 BoxCollider:
@@ -11811,6 +11811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -11950,7 +11951,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 405716380}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &405716383
 BoxCollider:
@@ -12036,6 +12036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -12175,7 +12176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 405983818}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &405983821
 BoxCollider:
@@ -12261,6 +12261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -12400,7 +12401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 408951900}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &408951903
 BoxCollider:
@@ -12486,6 +12486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -12625,7 +12626,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 413777416}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &413777419
 BoxCollider:
@@ -12711,6 +12711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -12850,7 +12851,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 428384254}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &428384257
 BoxCollider:
@@ -12936,6 +12936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -13075,7 +13076,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 439328190}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &439328193
 BoxCollider:
@@ -13266,6 +13266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -13405,7 +13406,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 441829351}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &441829354
 BoxCollider:
@@ -13523,6 +13523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -13662,7 +13663,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 451724418}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &451724421
 BoxCollider:
@@ -13748,6 +13748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -13887,7 +13888,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 453573798}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &453573801
 BoxCollider:
@@ -13973,6 +13973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -14112,7 +14113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 473710601}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &473710604
 BoxCollider:
@@ -14198,6 +14198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -14337,7 +14338,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 489306913}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &489306916
 BoxCollider:
@@ -14489,6 +14489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -14628,7 +14629,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 509138117}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &509138120
 BoxCollider:
@@ -14712,6 +14712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -14851,7 +14852,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 511091901}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &511091904
 BoxCollider:
@@ -14939,6 +14939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -15078,7 +15079,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 514824095}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &514824098
 BoxCollider:
@@ -15164,6 +15164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -15303,7 +15304,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 514841337}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &514841340
 BoxCollider:
@@ -15389,6 +15389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -15528,7 +15529,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 516685818}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &516685821
 BoxCollider:
@@ -15614,6 +15614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -15753,7 +15754,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 520402884}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &520402887
 BoxCollider:
@@ -15944,6 +15944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -16083,7 +16084,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 538095456}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &538095459
 BoxCollider:
@@ -16169,6 +16169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -16308,7 +16309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 542102684}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &542102687
 BoxCollider:
@@ -16394,6 +16394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -16533,7 +16534,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 542347295}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &542347298
 BoxCollider:
@@ -16724,6 +16724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -16863,7 +16864,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 547015144}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &547015147
 BoxCollider:
@@ -16949,6 +16949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -17088,7 +17089,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 547447180}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &547447183
 BoxCollider:
@@ -17174,6 +17174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -17313,7 +17314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 561058337}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &561058340
 BoxCollider:
@@ -17399,6 +17399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -17538,7 +17539,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 565171190}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &565171193
 BoxCollider:
@@ -17823,6 +17823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -17962,7 +17963,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 607675800}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &607675803
 BoxCollider:
@@ -18048,6 +18048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -18187,7 +18188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 622194718}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &622194721
 BoxCollider:
@@ -18378,6 +18378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -18517,7 +18518,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 642056773}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &642056776
 BoxCollider:
@@ -18660,6 +18660,18 @@ PrefabInstance:
     - target: {fileID: 4770597366765718469, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
       propertyPath: whatIsInteractable.m_Bits
       value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770597366765718469, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
+      propertyPath: onAssigned.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1528804966}
+    - target: {fileID: 4770597366765718469, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
+      propertyPath: onUnassigned.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1528804966}
+    - target: {fileID: 6817377867194834155, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 116.35602
       objectReference: {fileID: 0}
     - target: {fileID: 7249582457643448693, guid: d08ae91d454b6b54f9aa3ecd9e7f354f, type: 3}
       propertyPath: m_Name
@@ -18825,6 +18837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -18964,7 +18977,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 695421110}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &695421113
 BoxCollider:
@@ -19050,6 +19062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -19189,7 +19202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 698068083}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &698068086
 BoxCollider:
@@ -19275,6 +19287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -19414,7 +19427,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 703247451}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &703247454
 BoxCollider:
@@ -19500,6 +19512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -19639,7 +19652,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 712449292}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &712449295
 BoxCollider:
@@ -19830,6 +19842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -19969,7 +19982,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 740857670}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &740857673
 BoxCollider:
@@ -20055,6 +20067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -20194,7 +20207,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 745101276}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &745101279
 BoxCollider:
@@ -20280,6 +20292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -20419,7 +20432,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 745540517}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &745540520
 BoxCollider:
@@ -20505,6 +20517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -20644,7 +20657,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 776745161}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &776745164
 BoxCollider:
@@ -20730,6 +20742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -20869,7 +20882,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 778288659}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &778288662
 BoxCollider:
@@ -20955,6 +20967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -21094,7 +21107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 779792131}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &779792134
 BoxCollider:
@@ -21180,6 +21192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -21319,7 +21332,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 795814405}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &795814408
 BoxCollider:
@@ -21405,6 +21417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -21544,7 +21557,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 796488427}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &796488430
 BoxCollider:
@@ -21630,6 +21642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -21769,7 +21782,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 804258855}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &804258858
 BoxCollider:
@@ -21855,6 +21867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -21994,7 +22007,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 811872957}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &811872960
 BoxCollider:
@@ -22080,6 +22092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -22219,7 +22232,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 821962849}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &821962852
 BoxCollider:
@@ -22305,6 +22317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -22444,7 +22457,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 821994889}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &821994892
 BoxCollider:
@@ -22530,6 +22542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -22669,7 +22682,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 825022448}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &825022451
 BoxCollider:
@@ -22755,6 +22767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -22894,7 +22907,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 826459769}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &826459772
 BoxCollider:
@@ -23085,6 +23097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -23224,7 +23237,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 836381305}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &836381308
 BoxCollider:
@@ -23310,6 +23322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -23449,7 +23462,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 838519467}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &838519470
 BoxCollider:
@@ -23535,6 +23547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -23674,7 +23687,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 841303721}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &841303724
 BoxCollider:
@@ -23760,6 +23772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -23899,7 +23912,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 841897436}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &841897439
 BoxCollider:
@@ -23985,6 +23997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -24124,7 +24137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 842858562}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &842858565
 BoxCollider:
@@ -24210,6 +24222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -24349,7 +24362,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 844160479}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &844160482
 BoxCollider:
@@ -24435,6 +24447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -24574,7 +24587,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 847016679}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &847016682
 BoxCollider:
@@ -24660,6 +24672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -24799,7 +24812,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 853055025}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &853055028
 BoxCollider:
@@ -24885,6 +24897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -25024,7 +25037,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 859259986}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &859259989
 BoxCollider:
@@ -25110,6 +25122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -25249,7 +25262,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 873397760}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &873397763
 BoxCollider:
@@ -25335,6 +25347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -25474,7 +25487,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 875744327}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &875744330
 BoxCollider:
@@ -25662,6 +25674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -25801,7 +25814,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 879335621}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &879335624
 BoxCollider:
@@ -25887,6 +25899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -26026,7 +26039,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 882851112}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &882851115
 BoxCollider:
@@ -26532,6 +26544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -26671,7 +26684,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 921420018}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &921420021
 BoxCollider:
@@ -26757,6 +26769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -26896,7 +26909,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 923034538}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &923034541
 BoxCollider:
@@ -26982,6 +26994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -27121,7 +27134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 927672522}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &927672525
 BoxCollider:
@@ -27207,6 +27219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -27346,7 +27359,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 933690220}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &933690223
 BoxCollider:
@@ -27537,6 +27549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -27676,7 +27689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 942425105}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &942425108
 BoxCollider:
@@ -27762,6 +27774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -27901,7 +27914,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 959503244}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &959503247
 BoxCollider:
@@ -27987,6 +27999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -28126,7 +28139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 982267325}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &982267328
 BoxCollider:
@@ -28212,6 +28224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -28351,7 +28364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1001180448}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1001180451
 BoxCollider:
@@ -28542,6 +28554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -28681,7 +28694,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1011523267}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1011523270
 BoxCollider:
@@ -28767,6 +28779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -28906,7 +28919,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1025891599}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1025891602
 BoxCollider:
@@ -29097,6 +29109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -29236,7 +29249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1035837816}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1035837819
 BoxCollider:
@@ -29322,6 +29334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -29461,7 +29474,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1039766896}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1039766899
 BoxCollider:
@@ -29547,6 +29559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -29686,7 +29699,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1039874895}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1039874898
 BoxCollider:
@@ -29772,6 +29784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -29911,7 +29924,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1055062617}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1055062620
 BoxCollider:
@@ -29997,6 +30009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -30136,7 +30149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1056820350}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1056820353
 BoxCollider:
@@ -30222,6 +30234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -30361,7 +30374,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1073928523}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1073928526
 BoxCollider:
@@ -30447,6 +30459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -30586,7 +30599,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1085886496}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1085886499
 BoxCollider:
@@ -30672,6 +30684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -30811,7 +30824,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1089753572}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1089753575
 BoxCollider:
@@ -30963,6 +30975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -31102,7 +31115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1109688139}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1109688142
 BoxCollider:
@@ -31188,6 +31200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -31327,7 +31340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1120263335}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1120263338
 BoxCollider:
@@ -31413,6 +31425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -31552,7 +31565,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1121822690}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1121822693
 BoxCollider:
@@ -31638,6 +31650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -31777,7 +31790,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1140068021}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1140068024
 BoxCollider:
@@ -31894,6 +31906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -32033,7 +32046,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1170880485}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1170880488
 BoxCollider:
@@ -32202,6 +32214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -32341,7 +32354,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1189548119}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1189548122
 BoxCollider:
@@ -32427,6 +32439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -32566,7 +32579,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1192915812}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1192915815
 BoxCollider:
@@ -32757,6 +32769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -32896,7 +32909,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1197060570}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1197060573
 BoxCollider:
@@ -32963,10 +32975,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 798644b0a1a06c44dafd2c40297319e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  translationSpeed: 2
+  startSpeed: 1
+  currentSpeed: 2
+  acceleration: 0.5
+  maxSpeed: 3
   rotateSpeed: 5
   difficultyValue: 1
   colorChangeElements: []
+  offset: {x: 0, y: 0, z: 0}
+  crashAsset: {fileID: 0}
+  currentTile: {fileID: 0}
+  prevTile: {fileID: 0}
+  yAltCheck: -3.5
+  rotEulerAngleCheck: {x: 0, y: 0, z: 0}
+  ShipRadius: 4
+  currentDirectionAngle: {x: 0, y: 0, z: 0}
+  CrashAngleSpeed: 0
+  SinkAltSpeed: 0
+  gizmosOn: 1
 --- !u!4 &1203014068
 Transform:
   m_ObjectHideFlags: 0
@@ -33160,6 +33186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -33299,7 +33326,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1223345922}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1223345925
 BoxCollider:
@@ -33385,6 +33411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -33524,7 +33551,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1265988556}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1265988559
 BoxCollider:
@@ -33610,6 +33636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -33749,7 +33776,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1277371272}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1277371275
 BoxCollider:
@@ -33940,6 +33966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -34079,7 +34106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1287484810}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1287484813
 BoxCollider:
@@ -34165,6 +34191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -34304,7 +34331,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1291407107}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1291407110
 BoxCollider:
@@ -34390,6 +34416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -34529,7 +34556,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1299612682}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1299612685
 BoxCollider:
@@ -34615,6 +34641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -34754,7 +34781,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1326692786}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1326692789
 BoxCollider:
@@ -34840,6 +34866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -34979,7 +35006,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1347579189}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1347579192
 BoxCollider:
@@ -35065,6 +35091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -35204,7 +35231,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1347756087}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1347756090
 BoxCollider:
@@ -35290,6 +35316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -35429,7 +35456,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1360764025}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1360764028
 BoxCollider:
@@ -35515,6 +35541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -35654,7 +35681,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1367666575}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1367666578
 BoxCollider:
@@ -35740,6 +35766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -35879,7 +35906,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1387267695}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1387267698
 BoxCollider:
@@ -35965,6 +35991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -36104,7 +36131,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1404668083}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1404668086
 BoxCollider:
@@ -36190,6 +36216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -36329,7 +36356,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1405148732}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1405148735
 BoxCollider:
@@ -36415,6 +36441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -36554,7 +36581,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1406280336}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1406280339
 BoxCollider:
@@ -36723,6 +36749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -36862,7 +36889,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1424124111}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1424124114
 BoxCollider:
@@ -36948,6 +36974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -37087,7 +37114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1426427788}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1426427791
 BoxCollider:
@@ -37173,6 +37199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -37312,7 +37339,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1427212036}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1427212039
 BoxCollider:
@@ -37398,6 +37424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -37537,7 +37564,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1435749859}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1435749862
 BoxCollider:
@@ -37623,6 +37649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -37762,7 +37789,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1439733991}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1439733994
 BoxCollider:
@@ -37848,6 +37874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -37987,7 +38014,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1447703892}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1447703895
 BoxCollider:
@@ -38073,6 +38099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -38212,7 +38239,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1454386111}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1454386114
 BoxCollider:
@@ -38298,6 +38324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -38437,7 +38464,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1457521357}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1457521360
 BoxCollider:
@@ -38523,6 +38549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -38662,7 +38689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1468938166}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1468938169
 BoxCollider:
@@ -38748,6 +38774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -38887,7 +38914,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1476705092}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1476705095
 BoxCollider:
@@ -38973,6 +38999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -39112,7 +39139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1479500164}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1479500167
 BoxCollider:
@@ -39198,6 +39224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -39337,7 +39364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1491002501}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1491002504
 BoxCollider:
@@ -39423,6 +39449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -39562,7 +39589,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1492920121}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1492920124
 BoxCollider:
@@ -39648,6 +39674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -39787,7 +39814,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1500347764}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1500347767
 BoxCollider:
@@ -39978,6 +40004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -40117,7 +40144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1502270628}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1502270631
 BoxCollider:
@@ -40236,6 +40262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -40375,7 +40402,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1512387189}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1512387192
 BoxCollider:
@@ -40461,6 +40487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -40600,7 +40627,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1524693654}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1524693657
 BoxCollider:
@@ -40686,6 +40712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -40825,7 +40852,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1528705579}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1528705582
 BoxCollider:
@@ -40861,6 +40887,118 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridPosition: {x: 0, y: 1}
+--- !u!1001 &1528804964
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2041790619639542145, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035277593888352037, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+--- !u!114 &1528804966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7953954555824180013, guid: b31851f5cab6d524dacf75803b484cc4, type: 3}
+  m_PrefabInstance: {fileID: 1528804964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf26223fa72c2de4ba1afe6ff34395f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1538752364
 GameObject:
   m_ObjectHideFlags: 0
@@ -40911,6 +41049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -41050,7 +41189,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1538752368}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1538752371
 BoxCollider:
@@ -41241,6 +41379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -41380,7 +41519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1550375307}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1550375310
 BoxCollider:
@@ -41466,6 +41604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -41605,7 +41744,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1556703483}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1556703486
 BoxCollider:
@@ -41691,6 +41829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -41830,7 +41969,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1575680209}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1575680212
 BoxCollider:
@@ -41916,6 +42054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -42055,7 +42194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1587513313}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1587513316
 BoxCollider:
@@ -42141,6 +42279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -42280,7 +42419,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1599030390}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1599030393
 BoxCollider:
@@ -42366,6 +42504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -42505,7 +42644,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1603152335}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1603152338
 BoxCollider:
@@ -42591,6 +42729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -42730,7 +42869,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1607980041}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1607980044
 BoxCollider:
@@ -42816,6 +42954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -42955,7 +43094,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1611638988}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1611638991
 BoxCollider:
@@ -43041,6 +43179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -43180,7 +43319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1614624698}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1614624701
 BoxCollider:
@@ -43266,6 +43404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -43405,7 +43544,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1616452339}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1616452342
 BoxCollider:
@@ -43491,6 +43629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -43630,7 +43769,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1629965938}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1629965941
 BoxCollider:
@@ -43716,6 +43854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -43855,7 +43994,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1631105821}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1631105824
 BoxCollider:
@@ -43941,6 +44079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -44080,7 +44219,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1647325515}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1647325518
 BoxCollider:
@@ -44376,6 +44514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -44515,7 +44654,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1681508022}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1681508025
 BoxCollider:
@@ -44706,6 +44844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -44845,7 +44984,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1695572692}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1695572695
 BoxCollider:
@@ -44931,6 +45069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -45070,7 +45209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1695868198}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1695868201
 BoxCollider:
@@ -45156,6 +45294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -45295,7 +45434,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1700770002}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1700770005
 BoxCollider:
@@ -45381,6 +45519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -45520,7 +45659,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1714080246}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1714080249
 BoxCollider:
@@ -45606,6 +45744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -45745,7 +45884,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1715273121}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1715273124
 BoxCollider:
@@ -45831,6 +45969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -45970,7 +46109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1717099824}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1717099827
 BoxCollider:
@@ -46056,6 +46194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -46195,7 +46334,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1717505416}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1717505419
 BoxCollider:
@@ -46281,6 +46419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -46420,7 +46559,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1717962656}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1717962659
 BoxCollider:
@@ -46506,6 +46644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -46645,7 +46784,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1729369895}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1729369898
 BoxCollider:
@@ -46731,6 +46869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -46870,7 +47009,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1776384343}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1776384346
 BoxCollider:
@@ -46956,6 +47094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -47095,7 +47234,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1780291106}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1780291109
 BoxCollider:
@@ -47247,6 +47385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -47386,7 +47525,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1806437503}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1806437506
 BoxCollider:
@@ -47472,6 +47610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -47611,7 +47750,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1834526741}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1834526744
 BoxCollider:
@@ -47697,6 +47835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -47836,7 +47975,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1842430728}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1842430731
 BoxCollider:
@@ -47922,6 +48060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -48061,7 +48200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1846283445}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1846283448
 BoxCollider:
@@ -48147,6 +48285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -48286,7 +48425,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1869828282}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1869828285
 BoxCollider:
@@ -48372,6 +48510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -48511,7 +48650,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1884449307}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1884449310
 BoxCollider:
@@ -48702,6 +48840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -48841,7 +48980,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1909311696}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1909311699
 BoxCollider:
@@ -48927,6 +49065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -49066,7 +49205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1919985837}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1919985840
 BoxCollider:
@@ -49152,6 +49290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -49291,7 +49430,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1955578625}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1955578628
 BoxCollider:
@@ -49443,6 +49581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -49582,7 +49721,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1968443560}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1968443563
 BoxCollider:
@@ -49668,6 +49806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -49807,7 +49946,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1970314551}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1970314554
 BoxCollider:
@@ -49893,6 +50031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -50032,7 +50171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1977606387}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1977606390
 BoxCollider:
@@ -50118,6 +50256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -50257,7 +50396,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1979582214}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1979582217
 BoxCollider:
@@ -50343,6 +50481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -50482,7 +50621,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1980957226}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1980957229
 BoxCollider:
@@ -50673,6 +50811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -50812,7 +50951,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1991865739}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1991865742
 BoxCollider:
@@ -50898,6 +51036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -51037,7 +51176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1992715036}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1992715039
 BoxCollider:
@@ -51123,6 +51261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -51262,7 +51401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1995988379}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1995988382
 BoxCollider:
@@ -51348,6 +51486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -51487,7 +51626,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 1998528982}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &1998528985
 BoxCollider:
@@ -51573,6 +51711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -51712,7 +51851,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2005364246}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2005364249
 BoxCollider:
@@ -51798,6 +51936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -51937,7 +52076,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2012592637}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2012592640
 BoxCollider:
@@ -52023,6 +52161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -52162,7 +52301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2017421846}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2017421849
 BoxCollider:
@@ -52248,6 +52386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -52387,7 +52526,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2018052990}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2018052993
 BoxCollider:
@@ -52473,6 +52611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -52612,7 +52751,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2026743824}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2026743827
 BoxCollider:
@@ -52698,6 +52836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -52837,7 +52976,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2029255235}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2029255238
 BoxCollider:
@@ -52923,6 +53061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -53062,7 +53201,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2031131235}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2031131238
 BoxCollider:
@@ -53148,6 +53286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -53287,7 +53426,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2055240428}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2055240431
 BoxCollider:
@@ -53373,6 +53511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -53512,7 +53651,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2059928190}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2059928193
 BoxCollider:
@@ -53598,6 +53736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -53737,7 +53876,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2060095967}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2060095970
 BoxCollider:
@@ -53823,6 +53961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -53962,7 +54101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2060125359}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2060125362
 BoxCollider:
@@ -54048,6 +54186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -54187,7 +54326,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2067756337}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2067756340
 BoxCollider:
@@ -54378,6 +54516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -54517,7 +54656,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2089811776}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2089811779
 BoxCollider:
@@ -54603,6 +54741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -54742,7 +54881,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2105238063}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2105238066
 BoxCollider:
@@ -54922,6 +55060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -55061,7 +55200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2115669740}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2115669743
 BoxCollider:
@@ -55229,6 +55367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -55368,7 +55507,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2136358536}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2136358539
 BoxCollider:
@@ -55454,6 +55592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a38025e90c7674f9589f2de8ec6063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialized: 0
   whatIsShip:
     serializedVersion: 2
     m_Bits: 1024
@@ -55593,7 +55732,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedbackPlayer: {fileID: 0}
-  meshRenderer: {fileID: 2143756185}
   data: {fileID: 11400000, guid: 744a7f4a061bca2488e56f6759db3024, type: 2}
 --- !u!65 &2143756188
 BoxCollider:
