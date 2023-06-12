@@ -15,7 +15,9 @@ public class TimerComponent : MonoBehaviour
     public TMP_Text Gametime;
     public float StartTime;
 
-    float _timeRemaining;
+    private float _timeRemaining;
+
+    public float TimeRemaining => _timeRemaining;
 
     bool _timeRunning = true;
 

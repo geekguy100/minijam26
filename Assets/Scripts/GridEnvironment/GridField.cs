@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class GridField : MonoBehaviour
 {
-    [SerializeField] private bool generateOnStart;
+    [SerializeField] public bool generateOnStart;
     
     [SerializeField]
     private int gridWidth = 10;
@@ -22,7 +22,7 @@ public class GridField : MonoBehaviour
     [SerializeField]
     private GameObject gridTileObject;
 
-    private List<GridTile> gridLayout; // represents the entire [gridWidth, gridHeight] map
+    public List<GridTile> gridLayout; // represents the entire [gridWidth, gridHeight] map
 
     public int GridWidth => gridWidth;
     public int GridHeight => gridHeight;
@@ -71,22 +71,22 @@ public class GridField : MonoBehaviour
     private void SetBoundingBox()
     {
         bound = Instantiate(boundary, transform).GetComponent<BoxCollider>();
-        bound.transform.position = new Vector3(-gridWidth/2, 0, (gridHeight / 2) * heightSpacing);
+        bound.transform.position = new Vector3(-gridWidth/2, 0, (gridHeight / 2) * heightSpacing) + transform.position;
         bound.size = new Vector3(.1f, 25, heightSpacing * gridHeight);
 
 
         bound = Instantiate(boundary, transform).GetComponent<BoxCollider>();
-        bound.transform.position = new Vector3(gridWidth * widthSpacing + gridWidth/2, 0, (gridHeight / 2) * heightSpacing);
+        bound.transform.position = new Vector3(gridWidth * widthSpacing, 0, (gridHeight / 2) * heightSpacing) + transform.position;
         bound.size = new Vector3(.1f, 25, heightSpacing * gridHeight);
 
 
         bound = Instantiate(boundary, transform).GetComponent<BoxCollider>();
-        bound.transform.position = new Vector3((gridWidth / 2) * widthSpacing, 0, -gridHeight / 2);
+        bound.transform.position = new Vector3((gridWidth / 2) * widthSpacing, 0, -gridHeight / 2) + transform.position;
         bound.size = new Vector3(widthSpacing * gridWidth, 25, .1f);
 
 
         bound = Instantiate(boundary, transform).GetComponent<BoxCollider>();
-        bound.transform.position = new Vector3((gridWidth / 2) * widthSpacing, 0, gridHeight * heightSpacing + gridHeight/2);
+        bound.transform.position = new Vector3((gridWidth / 2) * widthSpacing, 0, gridHeight * heightSpacing) + transform.position;
         bound.size = new Vector3(widthSpacing * gridWidth, 25, .1f);        
     }
     /// <summary>

@@ -31,7 +31,7 @@ public class Interactor : MonoBehaviour
         currentInteractable = interactable;
         currentInteractable.OnAssigned();
         
-        print("Assigned interactable");
+        //print("Assigned interactable");
         
         onAssigned?.Invoke(interactable);
     }
@@ -52,7 +52,7 @@ public class Interactor : MonoBehaviour
         currentInteractable.OnUnassigned();
         currentInteractable = null;
         
-        print("Unassigned interactable");
+        //print("Unassigned interactable");
 
         onUnassigned?.Invoke();
     }
