@@ -16,6 +16,7 @@ public enum Team
 }
 public class Ship : MonoBehaviour
 {
+    private float TIMETODELETE;
     [Header("Movement")]
     [SerializeField] private float startSpeed = 1f;
     [SerializeField] private float currentSpeed = 2f;
@@ -63,9 +64,16 @@ public class Ship : MonoBehaviour
     private void Start()
     {
         currentSpeed = startSpeed;
+        TIMETODELETE = 30;
     }
     private void Update()
     {
+        TIMETODELETE -= Time.deltaTime;
+
+        if (TIMETODELETE <= 0)
+        {
+            onShipFailed?.Invoke(this);
+        }
         if (!spawning)
         {
             currentSpeed += acceleration * Time.deltaTime;
@@ -383,7 +391,7 @@ public class Ship : MonoBehaviour
     void SinkMovement()
     {
         bool alt = this.transform.position.y > yAltCheck;
-        Debug.Log("Sink Movement");
+
         //check if we sunk far enough
         if (alt)
         {
