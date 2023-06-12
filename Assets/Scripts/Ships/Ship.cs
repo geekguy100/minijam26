@@ -273,9 +273,24 @@ public class Ship : MonoBehaviour
                     //have a new tile
                     //check if it is an obstacle
                     TileCheck(tile);
-                    return;
+                    //return;
                 }
             }
+
+
+            //collision with another ship
+            if (LayerMask.LayerToName(go.transform.gameObject.layer) == "Ship" &&
+                go.transform.TryGetComponent<Ship>(out Ship ship))
+            {
+                if(ship.gameObject != this.gameObject)
+                {
+                    //we have hit another ship
+                    Debug.Log("Collided with Ship: " + ship.gameObject.name);
+                    sinkMovementActive = true;
+                    //TileCheck(currentTile);
+                }
+            }
+
         }
     }
 
@@ -313,7 +328,7 @@ public class Ship : MonoBehaviour
             //currentTile = currentTile;
 
         } else {
-            Debug.Log("Set Tile: " + tile.name);
+            //Debug.Log("Set Tile: " + tile.name);
             //tile is safe, set it as current tile. buisness as usual
             if (currentTile == null)
                 prevTile = tile;
@@ -335,13 +350,7 @@ public class Ship : MonoBehaviour
         //when this ship crashes it will stop then sink down
         Debug.Log(transform.name + "Crashed at " + prevTile.name);
 
-        //if (prevTile != null)
-            prevTile.SetNewHazard(crashAsset);
-        //else
-        //{
-         //   Debug.LogWarning("No prev tile to set, use current");
-         //   currentTile.SetNewHazard(crashAsset);
-        //}
+        prevTile.SetNewHazard(crashAsset);
 
         //run event for failure
         onShipCrash?.Invoke(this);

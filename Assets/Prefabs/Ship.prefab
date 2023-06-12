@@ -220,14 +220,16 @@ MonoBehaviour:
   translationSpeed: 5
   rotateSpeed: 5
   difficultyValue: 1
+  colorChangeElements: []
   crashAsset: {fileID: 919132149155446097, guid: 76cb4bbeec6389c4bbbadc8c1cb3379e, type: 3}
   currentTile: {fileID: 0}
+  prevTile: {fileID: 0}
   yAltCheck: -3.5
   rotEulerAngleCheck: {x: 0, y: 0, z: 0}
   ShipRadius: 7
   CrashAngleSpeed: 0.4
   SinkAltSpeed: 3
-  gizmosOn: 1
+  gizmosOn: 0
 --- !u!54 &524934568326788809
 Rigidbody:
   m_ObjectHideFlags: 0
