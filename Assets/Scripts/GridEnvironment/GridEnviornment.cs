@@ -21,12 +21,17 @@ public class GridEnviornment : MonoBehaviour
             return;
         }
 
-        Debug.Log("Set hazard");
+       // Debug.Log("Set hazard at " + this.transform.name);
 
         //spawn in asset
+        //could randomize rotation
+        
         HazEnv = Instantiate(newHaz, HazSpawnOrigin.position, HazSpawnOrigin.rotation);
-
-
+        HazEnv.transform.parent = this.transform;
+        HazEnv.transform.SetPositionAndRotation(HazSpawnOrigin.transform.position, HazSpawnOrigin.transform.rotation);
+       // Debug.Log("Local: " + HazEnv.transform.localPosition);
+       // Debug.Log("Globe: " + HazEnv.transform.position);
+        HazEnv.transform.position = HazSpawnOrigin.transform.position;
 
         //mark this tile as hazard
         Hazard = true;

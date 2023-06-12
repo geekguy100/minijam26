@@ -200,10 +200,10 @@ Transform:
   m_LocalScale: {x: 1.1600001, y: 1.16, z: 1.1600001}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 5319654295656567138}
+  - {fileID: 2229775359064220195}
   - {fileID: 2320286919144500112}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &6084048782585389649
 MonoBehaviour:
@@ -220,7 +220,7 @@ MonoBehaviour:
   translationSpeed: 5
   rotateSpeed: 5
   difficultyValue: 1
-  crashAsset: {fileID: 1025157051033047400, guid: 82800ca07c02a1344aae6768493c1328, type: 3}
+  crashAsset: {fileID: 919132149155446097, guid: 76cb4bbeec6389c4bbbadc8c1cb3379e, type: 3}
   currentTile: {fileID: 0}
   yAltCheck: -3.5
   rotEulerAngleCheck: {x: 0, y: 0, z: 0}
@@ -515,7 +515,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fc52d714ce49d3458f989765fb2782d, type: 3}
---- !u!4 &5319654295656567138 stripped
+--- !u!4 &2229775359064220195 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2262489365513218588, guid: 3fc52d714ce49d3458f989765fb2782d, type: 3}
   m_PrefabInstance: {fileID: 113780724035913791}
