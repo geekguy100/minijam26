@@ -38,7 +38,7 @@ public class Ship : MonoBehaviour
     [Header("Crash Stats")]
     public GameObject crashAsset;
     public GridEnviornment currentTile;
-    GridEnviornment prevTile;
+    public GridEnviornment prevTile;
     GameObject ctile;
 
     public float yAltCheck = -3.5f;
@@ -248,14 +248,11 @@ public class Ship : MonoBehaviour
         {
             GameObject go = hitCollider.gameObject;
 
-            //Debug.Log("1: " + hitCollider.transform.name);
             if (LayerMask.LayerToName(go.transform.gameObject.layer) == "TileInteractable" &&
                 go.transform.TryGetComponent<GridEnviornment>(out GridEnviornment tile))
             {
-                //Debug.Log("2: " + go.transform.name);
                 if (currentTile != tile && prevTile != tile)
                 {
-                    //Debug.Log("3: " + go.transform.name);
                     //have a new tile
                     //check if it is an obstacle
                     TileCheck(tile);
@@ -278,7 +275,8 @@ public class Ship : MonoBehaviour
 
     Vector3 RandomAngle()
     {
-        float xVal = transform.localEulerAngles.x + UnityEngine.Random.Range(0, -30f);
+        CrashAngleSpeed = UnityEngine.Random.Range(0.2f, 0.45f);
+        float xVal = transform.localEulerAngles.x + UnityEngine.Random.Range(10, -30f);
         float yVal = transform.localEulerAngles.y + UnityEngine.Random.Range(-10f, 10f);
         float zVal = transform.localEulerAngles.z + UnityEngine.Random.Range(-10.0f, 10.0f);
         return new Vector3(xVal, yVal, zVal);
@@ -298,7 +296,11 @@ public class Ship : MonoBehaviour
         } else {
             Debug.Log("Set Tile: " + tile.name);
             //tile is safe, set it as current tile. buisness as usual
-            prevTile = currentTile;
+            if (!currentTile)
+                prevTile = tile;
+            else
+                prevTile = currentTile;
+
             currentTile = tile;
 
             ctile = currentTile.gameObject;
@@ -314,7 +316,13 @@ public class Ship : MonoBehaviour
         //when this ship crashes it will stop then sink down
         Debug.Log(transform.name + "Crashed.");
 
-        currentTile.SetNewHazard(crashAsset);
+        if (prevTile)
+            prevTile.SetNewHazard(crashAsset);
+        else
+        {
+            Debug.LogWarning("No prev tile to set, use current");
+            currentTile.SetNewHazard(crashAsset);
+        }
 
         //run event for failure
         onShipCrash?.Invoke(this);
@@ -326,31 +334,20 @@ public class Ship : MonoBehaviour
 
     void SinkMovement()
     {
-        bool bypass = false;
+        bool alt = this.transform.position.y > yAltCheck;
 
-        bool alt = this.transform.position.y >= yAltCheck;
-        if (!bypass)
+        //check if we sunk far enough
+        if (alt)
         {
-            //check if we sunk far enough
-            if (alt)
-            {
-                Vector3 sinkVec = sinkDirection * SinkAltSpeed * Time.deltaTime;
-                transform.Translate(sinkVec, Space.World);
-                Vector3 newRot = Vector3.Lerp(this.transform.localRotation.eulerAngles, rotEulerAngleCheck, CrashAngleSpeed * Time.deltaTime);
-                transform.rotation = Quaternion.Euler(newRot);
-            }
-
-        } else {
-            alt = true;
+            Vector3 sinkVec = sinkDirection * SinkAltSpeed * Time.deltaTime;
+            transform.Translate(sinkVec, Space.World);
+            Vector3 newRot = Vector3.Lerp(this.transform.localRotation.eulerAngles, rotEulerAngleCheck, CrashAngleSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(newRot);
         }
-       
-
-        //once both the rotate and the sinkage is enough we can run the event for ShipCrash
-        if(!alt)
+        else
         {
             //sinkMovementActive = false;
             ShipCrash();
-
         }
     }
 }
