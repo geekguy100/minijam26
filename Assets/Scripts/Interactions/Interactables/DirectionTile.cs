@@ -2,21 +2,24 @@ using System;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 
-[RequireComponent(typeof(MMScaleShaker))]
+[RequireComponent(typeof(MMScaleShaker), typeof(ShipRotationBehaviour))]
 public class DirectionTile : MonoBehaviour, IInteractable
 {
+    private bool initialized;
+
+    private ShipRotationBehaviour rotationBehaviour;
     private Transform directionIndication;
     private SpriteRenderer spriteRenderer;
     private MMScaleShaker shaker;
 
     [SerializeField] private MMF_Player feedbackPlayer;
     
-    [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private DirectionTileData data;
 
     #region Initialization
     private void Awake()
     {
+        rotationBehaviour = GetComponent<ShipRotationBehaviour>();
         shaker = GetComponent<MMScaleShaker>();
     }
     
@@ -27,8 +30,7 @@ public class DirectionTile : MonoBehaviour, IInteractable
         spriteRenderer = directionIndication.gameObject.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = data.ArrowSprite;
 
-        meshRenderer.enabled = true;
-        spriteRenderer.enabled = true;
+        spriteRenderer.enabled = false;
         
         shaker.Channel = -1;
     }
@@ -47,9 +49,6 @@ public class DirectionTile : MonoBehaviour, IInteractable
     #region Assignment
     public void OnAssigned()
     {
-        // meshRenderer.enabled = true;
-        // spriteRenderer.enabled = true;
-
         shaker.Channel = 0;
         
         if (!ReferenceEquals(feedbackPlayer, null))
@@ -59,9 +58,6 @@ public class DirectionTile : MonoBehaviour, IInteractable
     public void OnUnassigned()
     {
         shaker.Channel = -1;
-
-        // meshRenderer.enabled = false;
-        // spriteRenderer.enabled = false;
     }
     #endregion
 
@@ -84,6 +80,9 @@ public class DirectionTile : MonoBehaviour, IInteractable
 
     public void PerformInteraction()
     {
+        spriteRenderer.enabled = true;
+        rotationBehaviour.initialized = true;
+        
         transform.Rotate(Vector3.up, 90f);
     }
 }
