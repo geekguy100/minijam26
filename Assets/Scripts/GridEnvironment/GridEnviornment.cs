@@ -13,6 +13,13 @@ public class GridEnviornment : MonoBehaviour
 
     public Transform HazSpawnOrigin;
 
+    private void Start()
+    {
+        if(HazEnv!= null)
+        {
+            SetNewHazard(HazEnv);
+        }
+    }
     public void SetNewHazard(GameObject newHaz)
     {
         if (!newHaz)

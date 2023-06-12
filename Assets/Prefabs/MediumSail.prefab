@@ -322,14 +322,14 @@ MonoBehaviour:
   colorChangeElements:
   - {fileID: 3379883070853660767}
   offset: {x: 90, y: 0, z: 180}
-  crashAsset: {fileID: 0}
+  crashAsset: {fileID: 919132149155446097, guid: 76cb4bbeec6389c4bbbadc8c1cb3379e, type: 3}
   currentTile: {fileID: 0}
   prevTile: {fileID: 0}
-  yAltCheck: -3.5
+  yAltCheck: -4.5
   rotEulerAngleCheck: {x: 0, y: 0, z: 0}
-  ShipRadius: 4
-  CrashAngleSpeed: 0
-  SinkAltSpeed: 0
+  ShipRadius: 7
+  CrashAngleSpeed: 0.4
+  SinkAltSpeed: 3
   gizmosOn: 1
 --- !u!54 &7086637551879632537
 Rigidbody:
