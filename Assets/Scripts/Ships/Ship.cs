@@ -66,7 +66,7 @@ public class Ship : MonoBehaviour
     private void Start()
     {
         currentSpeed = startSpeed;
-        TIMETODELETE = 30;
+        TIMETODELETE = 60;
     }
 
     private void Update()
