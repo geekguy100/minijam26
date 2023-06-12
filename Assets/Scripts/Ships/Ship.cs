@@ -24,7 +24,7 @@ public class Ship : MonoBehaviour
     [SerializeField] private float rotateSpeed = 5f;
     [SerializeField] private float difficultyValue = 1f;
     [SerializeField] private List<MeshRenderer> colorChangeElements;
-    //public Vector3 offset;
+    public Vector3 offset;
    // public Vector3 rotationAxis;
     private Vector2 targetDirection = new Vector2(1, 0);
 
@@ -75,9 +75,20 @@ public class Ship : MonoBehaviour
 
             currentDirection = (transform.forward).ToVector2();
             rotationVector = Vector2.Lerp(currentDirection, targetDirection, rotateSpeed * Time.deltaTime);
-            transform.Rotate(Vector3.up, Vector2.SignedAngle(currentDirection, rotationVector));
+
+            //transform.Rotate(Vector3.up, Vector2.SignedAngle(currentDirection, rotationVector));
             //transform.rotation = Quaternion.Euler(offset) * transform.rotation;
 
+
+            //targetDirection = targetDirection;
+
+            
+            float rotVal = -90 * targetDirection.x;
+            if (targetDirection.y == 1) { rotVal = 180; }
+            
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, rotVal, 0)) * Quaternion.Euler(offset), Time.deltaTime * rotateSpeed);
+            
             if (!sinkMovementActive)
             {
                 translationVector = targetDirection.ToVector3() * currentSpeed * Time.deltaTime;
@@ -236,7 +247,7 @@ public class Ship : MonoBehaviour
 
         //transform.rotation = Quaternion.Euler(new Vector3(0, rotVal, 0) + offset);
         transform.rotation = Quaternion.Euler(new Vector3(0, rotVal, 0));
-        //transform.rotation = transform.rotation * Quaternion.Euler(offset); 
+        transform.rotation = transform.rotation * Quaternion.Euler(offset); 
 
     }
 
