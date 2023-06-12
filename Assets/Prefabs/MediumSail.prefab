@@ -313,7 +313,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 798644b0a1a06c44dafd2c40297319e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  translationSpeed: 20
+  startSpeed: 10
+  currentSpeed: 1
+  acceleration: 1.5
+  maxSpeed: 30
   rotateSpeed: 5
   difficultyValue: 1
   colorChangeElements:
