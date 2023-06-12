@@ -36,7 +36,9 @@ public class ShipScoringManager : MonoBehaviour
         goal.AssignTeam(team);
         teamGoals[team].Add(goal);
         goal.OnGoalSuccess+= ProcessGoalCompletion;
-        
+        goal.OnGoalFailed += RemoveGoal;
+
+
         ship.onShipFailed += RemoveGoal;
         ship.onShipCrash += RemoveGoal;
         ship.onShipOutOfBounds += OnOutOfBounds;

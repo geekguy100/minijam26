@@ -17,11 +17,14 @@ public enum Team
 public class Ship : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] private float translationSpeed = 2f;
+    [SerializeField] private float startSpeed = 1f;
+    [SerializeField] private float currentSpeed = 2f;
+    [SerializeField] private float acceleration = .5f;
+    [SerializeField] private float maxSpeed = 3f;
     [SerializeField] private float rotateSpeed = 5f;
     [SerializeField] private float difficultyValue = 1f;
     [SerializeField] private List<MeshRenderer> colorChangeElements;
-    //public Vector3 offset;
+    public Vector3 offset;
    // public Vector3 rotationAxis;
     private Vector2 targetDirection = new Vector2(1, 0);
 
@@ -58,20 +61,40 @@ public class Ship : MonoBehaviour
     [Header("Debug Gizmos")]
     public bool gizmosOn = true;
 
+
+    private void Start()
+    {
+        currentSpeed = startSpeed;
+    }
+
     private void Update()
     {
         if (!spawning)
         {
+            currentSpeed += acceleration * Time.deltaTime;
+
+            currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
             //transform.rotation = transform.rotation * Quaternion.Euler(offset);
-            
+
             currentDirection = (transform.forward).ToVector2();
             rotationVector = Vector2.Lerp(currentDirection, targetDirection, rotateSpeed * Time.deltaTime);
-            transform.Rotate(Vector3.up, Vector2.SignedAngle(currentDirection, rotationVector));
+
+            //transform.Rotate(Vector3.up, Vector2.SignedAngle(currentDirection, rotationVector));
             //transform.rotation = Quaternion.Euler(offset) * transform.rotation;
 
+
+            //targetDirection = targetDirection;
+
+            
+            float rotVal = -90 * targetDirection.x;
+            if (targetDirection.y == 1) { rotVal = 180; }
+            
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, rotVal, 0)) * Quaternion.Euler(offset), Time.deltaTime * rotateSpeed);
+            
             if (!sinkMovementActive)
             {
-                translationVector = targetDirection.ToVector3() * translationSpeed * Time.deltaTime;
+                translationVector = targetDirection.ToVector3() * currentSpeed * Time.deltaTime;
                 transform.Translate(translationVector, Space.World);
 
                 //TESTFUNCTION();
@@ -228,7 +251,7 @@ public class Ship : MonoBehaviour
 
         //transform.rotation = Quaternion.Euler(new Vector3(0, rotVal, 0) + offset);
         transform.rotation = Quaternion.Euler(new Vector3(0, rotVal, 0));
-        //transform.rotation = transform.rotation * Quaternion.Euler(offset); 
+        transform.rotation = transform.rotation * Quaternion.Euler(offset); 
 
     }
 
@@ -239,7 +262,7 @@ public class Ship : MonoBehaviour
 
     public void StopShip()
     {
-        translationSpeed = 0;
+        currentSpeed = 0;
         FadeOut();
     }
     public void AssignMaterial(Material mat)
