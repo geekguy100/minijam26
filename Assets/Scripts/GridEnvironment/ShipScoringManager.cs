@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(GridField))]
@@ -18,6 +19,8 @@ public class ShipScoringManager : MonoBehaviour
     public int crashes = 0;
     public int outOfBounds = 0;
 
+    public TMP_Text GameScoreText;
+
     private void Awake()
     {
         grid = GetComponent<GridField>();
@@ -29,6 +32,12 @@ public class ShipScoringManager : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        GameScoreText.text = "Score: " + TESTSCORE.ToString();
+
+    }
+
     public void AddShipGoalPair(Ship ship, ShipGoal goal)
     {
         Team team = (Team)Random.Range(1, 4);
@@ -36,7 +45,9 @@ public class ShipScoringManager : MonoBehaviour
         goal.AssignTeam(team);
         teamGoals[team].Add(goal);
         goal.OnGoalSuccess+= ProcessGoalCompletion;
-        
+        goal.OnGoalFailed += RemoveGoal;
+
+
         ship.onShipFailed += RemoveGoal;
         ship.onShipCrash += RemoveGoal;
         ship.onShipOutOfBounds += OnOutOfBounds;

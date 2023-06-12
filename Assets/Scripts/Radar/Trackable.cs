@@ -47,6 +47,9 @@ public class Trackable : MonoBehaviour
             setEase(data.easingType).
             setOnComplete(() =>
             {
+                if (originalParent == null)
+                    Destroy(gameObject);
+                
                 transform.SetParent(originalParent);
                 transform.localPosition = Vector3.zero;
             });

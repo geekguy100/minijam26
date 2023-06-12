@@ -2556,6 +2556,10 @@ PrefabInstance:
       value: Ship
       objectReference: {fileID: 0}
     - target: {fileID: 6084048782585389649, guid: d4fc9d8d596873d479da51b7061333cc, type: 3}
+      propertyPath: yAltCheck
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084048782585389649, guid: d4fc9d8d596873d479da51b7061333cc, type: 3}
       propertyPath: crashAsset
       value: 
       objectReference: {fileID: 3328340613433841317, guid: 62185eb08dd51624a917da7bca95a8c8, type: 3}
