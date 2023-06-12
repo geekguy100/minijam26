@@ -170,7 +170,7 @@ public class Ship : MonoBehaviour
             foreach(MeshRenderer render in renderGroup)
             {
                 Color shipColor = render.material.color;
-                float fadeAmount = shipColor.a - (.75f * Time.deltaTime);
+                float fadeAmount = shipColor.a - (.5f * Time.deltaTime);
 
                 shipColor = new Color(shipColor.r, shipColor.g, shipColor.b, fadeAmount);
                 render.material.color = shipColor;
@@ -189,7 +189,7 @@ public class Ship : MonoBehaviour
             foreach (MeshRenderer render in renderGroup)
             {
                 Color shipColor = render.material.color;
-                float fadeAmount = shipColor.a + (1f * Time.deltaTime);
+                float fadeAmount = shipColor.a + (1.5f * Time.deltaTime);
 
                 shipColor = new Color(shipColor.r, shipColor.g, shipColor.b, fadeAmount);
                 render.material.color = shipColor;
