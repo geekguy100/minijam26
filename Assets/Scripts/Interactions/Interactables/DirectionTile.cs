@@ -28,7 +28,7 @@ public class DirectionTile : MonoBehaviour, IInteractable
         spriteRenderer.sprite = data.ArrowSprite;
 
         meshRenderer.enabled = true;
-        spriteRenderer.enabled = false;
+        spriteRenderer.enabled = true;
         
         shaker.Channel = -1;
     }
@@ -47,7 +47,7 @@ public class DirectionTile : MonoBehaviour, IInteractable
     public void OnAssigned()
     {
         // meshRenderer.enabled = true;
-        spriteRenderer.enabled = true;
+        // spriteRenderer.enabled = true;
 
         shaker.Channel = 0;
         
@@ -60,7 +60,7 @@ public class DirectionTile : MonoBehaviour, IInteractable
         shaker.Channel = -1;
 
         // meshRenderer.enabled = false;
-        spriteRenderer.enabled = false;
+        // spriteRenderer.enabled = false;
     }
     #endregion
 
