@@ -36,6 +36,7 @@ public class DirectionTile : MonoBehaviour, IInteractable
     private void CreateIndicationChild()
     {
         directionIndication = new GameObject("Direction Tile Indication").transform;
+        directionIndication.gameObject.layer = 9;
         directionIndication.SetParent(transform);
         directionIndication.localPosition = Vector3.zero;
         directionIndication.localScale = data.InitialScale;
