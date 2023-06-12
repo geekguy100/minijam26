@@ -16,6 +16,7 @@ public enum Team
 }
 public class Ship : MonoBehaviour
 {
+    private float TIMETODELETE;
     [Header("Movement")]
     [SerializeField] private float startSpeed = 1f;
     [SerializeField] private float currentSpeed = 2f;
@@ -65,10 +66,17 @@ public class Ship : MonoBehaviour
     private void Start()
     {
         currentSpeed = startSpeed;
+        TIMETODELETE = 30;
     }
 
     private void Update()
     {
+        TIMETODELETE -= Time.deltaTime;
+
+        if (TIMETODELETE <= 0)
+        {
+            onShipFailed?.Invoke(this);
+        }
         if (!spawning)
         {
             currentSpeed += acceleration * Time.deltaTime;
@@ -174,7 +182,7 @@ public class Ship : MonoBehaviour
             foreach(MeshRenderer render in renderGroup)
             {
                 Color shipColor = render.material.color;
-                float fadeAmount = shipColor.a - (.75f * Time.deltaTime);
+                float fadeAmount = shipColor.a - (.5f * Time.deltaTime);
 
                 shipColor = new Color(shipColor.r, shipColor.g, shipColor.b, fadeAmount);
                 render.material.color = shipColor;
@@ -193,7 +201,7 @@ public class Ship : MonoBehaviour
             foreach (MeshRenderer render in renderGroup)
             {
                 Color shipColor = render.material.color;
-                float fadeAmount = shipColor.a + (1f * Time.deltaTime);
+                float fadeAmount = shipColor.a + (1.5f * Time.deltaTime);
 
                 shipColor = new Color(shipColor.r, shipColor.g, shipColor.b, fadeAmount);
                 render.material.color = shipColor;
@@ -380,9 +388,11 @@ public class Ship : MonoBehaviour
         //run event for failure
         onShipCrash?.Invoke(this);
 
+        /*
         //for now disasble everything and lock it up
         this.gameObject.SetActive(false);
         this.GetComponent<Ship>().enabled = false;
+        */
     }
 
     void SinkMovement()
