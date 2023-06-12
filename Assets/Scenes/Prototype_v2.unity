@@ -57417,11 +57417,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09db1c2ea2a7b3544a01d5fbf29bf2f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamColors:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  shipColors:
+  - {fileID: 2100000, guid: ea009d4e610265347a671f1bfc26db0d, type: 2}
   - {fileID: 2100000, guid: 5a8aa2b2ab007984ead9cee542f76574, type: 2}
   - {fileID: 2100000, guid: 72a458c328a82bb4a9a00935ecbcf174, type: 2}
   - {fileID: 2100000, guid: 471e0c0ca7136d4429b82d5031313222, type: 2}
+  goalColors:
+  - {fileID: 2100000, guid: ea009d4e610265347a671f1bfc26db0d, type: 2}
+  - {fileID: 2100000, guid: b1ce6039f49c7b74c9cd9c35d4d038ce, type: 2}
+  - {fileID: 2100000, guid: a8b2ae10ebba8e243a47f280d9a732ff, type: 2}
+  - {fileID: 2100000, guid: f38e4477ebed1d74d9f7de585e1cbddb, type: 2}
   TESTSCORE: 0
   crashes: 0
   outOfBounds: 0
