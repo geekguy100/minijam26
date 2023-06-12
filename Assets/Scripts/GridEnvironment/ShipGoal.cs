@@ -9,6 +9,7 @@ public class ShipGoal : MonoBehaviour
     private Team colorTeam;
     public Team Team => colorTeam;
     public Action<Ship,ShipGoal> OnGoalSuccess;
+    public Action<Ship> OnGoalFailed;
     //public UnityEvent OnGoalFailed;
 
     private void Start()
@@ -40,6 +41,10 @@ public class ShipGoal : MonoBehaviour
         if (ship.Team == colorTeam)
         {
             OnGoalSuccess?.Invoke(ship,this);
+        }
+        else
+        {
+            OnGoalFailed?.Invoke(ship);
         }
         //StartCoroutine(CheckShip(ship));
     }
