@@ -26,9 +26,12 @@ public class ShipRotationBehaviour : MonoBehaviour
         print("Starting change ship direction");
         Transform shipTransform = ship.transform;
         Vector2 tilePos = transform.position.ToVector2();
-        
+        if(shipTransform == null)
+        {
+            yield break;
+        }
         // Wait until the ship is at the center of the tile.
-        yield return new WaitUntil(() => Vector2.Distance(shipTransform.position.ToVector2(), tilePos) < 0.01f);
+        yield return new WaitUntil(() => Vector2.Distance(shipTransform.position.ToVector2(), tilePos) < 0.1f);
 
         print("Changing ship direction to " + transform.forward.ToVector2());
         ship.OnDirectionChange(transform.forward.ToVector2());

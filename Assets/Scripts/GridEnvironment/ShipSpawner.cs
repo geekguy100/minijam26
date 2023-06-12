@@ -52,7 +52,7 @@ public class ShipSpawner : MonoBehaviour
 
     private void CalculateLevelDifficulty()
     {
-        difficulty = 3;
+        
         float quarterTime = timeline.StartTime / 4f;
         if(timeline.TimeRemaining  < quarterTime)
         {

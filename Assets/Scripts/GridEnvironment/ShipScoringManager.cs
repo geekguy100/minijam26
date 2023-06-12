@@ -7,7 +7,9 @@ using UnityEngine;
 public class ShipScoringManager : MonoBehaviour
 {
     [SerializeField]
-    public List<Material> teamColors;
+    public List<Material> shipColors;
+    [SerializeField]
+    public List<Material> goalColors;
 
     private Dictionary<Team, List<ShipGoal>> teamGoals;
     GridField grid;
@@ -39,8 +41,8 @@ public class ShipScoringManager : MonoBehaviour
         ship.onShipCrash += RemoveGoal;
         ship.onShipOutOfBounds += OnOutOfBounds;
 
-        ship.AssignMaterial(teamColors[(int)team]);
-        goal.AssignMaterial(teamColors[(int)team]);
+        ship.AssignMaterial(shipColors[(int)team]);
+        goal.AssignMaterial(goalColors[(int)team]);
         ship.FadeIn();
     }
 
@@ -60,7 +62,7 @@ public class ShipScoringManager : MonoBehaviour
         ShipGoal goal = teamGoals[ship.Team][Random.Range(0, teamGoals[ship.Team].Count)];
 
         teamGoals[goal.Team].Remove(goal);
-        goal.AssignMaterial(teamColors[0]);
+        goal.AssignMaterial(shipColors[0]);
         goal.RemoveGoal();
         ship.FadeOut();
     }
@@ -71,7 +73,7 @@ public class ShipScoringManager : MonoBehaviour
         ship.StopShip();
 
         teamGoals[goal.Team].Remove(goal);
-        goal.AssignMaterial(teamColors[0]);
+        goal.AssignMaterial(goalColors[0]);
         goal.RemoveGoal();
     }
 
