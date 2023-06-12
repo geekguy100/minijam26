@@ -61,11 +61,16 @@ public class ShipScoringManager : MonoBehaviour
     }
     private void RemoveGoal(Ship ship)
     {
-        ShipGoal goal = teamGoals[ship.Team][Random.Range(0, teamGoals[ship.Team].Count)];
+        if(teamGoals[ship.Team].Count > 0)
+        {
+            ShipGoal goal = teamGoals[ship.Team][Random.Range(0, teamGoals[ship.Team].Count)];
+            teamGoals[goal.Team].Remove(goal);
+            goal.AssignMaterial(shipColors[0]);
+            goal.RemoveGoal();
+        }
+        
 
-        teamGoals[goal.Team].Remove(goal);
-        goal.AssignMaterial(shipColors[0]);
-        goal.RemoveGoal();
+        
         ship.FadeOut();
     }
     private void ProcessGoalCompletion(Ship ship,ShipGoal goal)

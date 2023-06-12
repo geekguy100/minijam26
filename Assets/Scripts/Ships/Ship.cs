@@ -373,15 +373,17 @@ public class Ship : MonoBehaviour
         //run event for failure
         onShipCrash?.Invoke(this);
 
+        /*
         //for now disasble everything and lock it up
         this.gameObject.SetActive(false);
         this.GetComponent<Ship>().enabled = false;
+        */
     }
 
     void SinkMovement()
     {
         bool alt = this.transform.position.y > yAltCheck;
-
+        Debug.Log("Sink Movement");
         //check if we sunk far enough
         if (alt)
         {
