@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd764d8844226b4f9bd933575789956, type: 3}
   m_Name: Player Interactor Controls
   m_EditorClassIdentifier: 
-  interactionKey: 101
+  interactionKey: 32
   altInteractionKey: 323
   exitLightKey: 32
