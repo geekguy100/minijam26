@@ -225,11 +225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 798644b0a1a06c44dafd2c40297319e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  translationSpeed: 40
+  translationSpeed: 100
   rotateSpeed: 3
-  onShipDestroyed:
-    m_PersistentCalls:
-      m_Calls: []
+  difficultyValue: 1
+  colorChangeElements:
+  - {fileID: 8140323883821432008}
 --- !u!54 &5026818098812201683
 Rigidbody:
   m_ObjectHideFlags: 0
