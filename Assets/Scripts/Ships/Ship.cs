@@ -51,7 +51,7 @@ public class Ship : MonoBehaviour
             translationVector = (targetDirection.ToVector3()) * translationSpeed * Time.deltaTime;
             transform.Translate(translationVector, Space.World);
 
-            TESTFUNCTION();
+            //TESTFUNCTION();
         }
     }
 
