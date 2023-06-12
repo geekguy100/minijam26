@@ -14,7 +14,7 @@ public class PlayerInteractorController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(controls.InteractionKey))
+        if (Input.GetKeyDown(controls.InteractionKey) || Input.GetKeyDown(controls.InteractionAltKey))
         {
             interactor.Interact();
         }
