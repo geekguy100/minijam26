@@ -53,6 +53,7 @@ public class Ship : MonoBehaviour
     bool sinkMovementActive = false;
     public float ShipRadius = 4;
     private Vector3 sinkDirection = new Vector3(0, -1, 0);
+    public Vector3 currentDirectionAngle;
     public float CrashAngleSpeed;
     public float SinkAltSpeed;
     public Action<Ship> onShipCrash;
@@ -61,11 +62,13 @@ public class Ship : MonoBehaviour
     [Header("Debug Gizmos")]
     public bool gizmosOn = true;
 
+
     private void Start()
     {
         currentSpeed = startSpeed;
         TIMETODELETE = 30;
     }
+
     private void Update()
     {
         TIMETODELETE -= Time.deltaTime;
@@ -110,6 +113,7 @@ public class Ship : MonoBehaviour
 
     void FixedUpdate()
     {
+        currentDirectionAngle = transform.rotation.eulerAngles;
         if (!sinkMovementActive)
         {
             CheckCollision();
@@ -331,12 +335,15 @@ public class Ship : MonoBehaviour
         }
     }
 
+    Vector3 recording;
     Vector3 RandomAngle()
     {
         CrashAngleSpeed = UnityEngine.Random.Range(0.2f, 0.45f);
-        float xVal = transform.localEulerAngles.x + UnityEngine.Random.Range(10, -30f);
-        float yVal = transform.localEulerAngles.y + UnityEngine.Random.Range(-10f, 10f);
-        float zVal = transform.localEulerAngles.z + UnityEngine.Random.Range(-10.0f, 10.0f);
+        float xVal = transform.localEulerAngles.x + UnityEngine.Random.Range(20, -40f);
+        float yVal = transform.localEulerAngles.y + UnityEngine.Random.Range(-15f, 15f);
+        float zVal = transform.localEulerAngles.z + UnityEngine.Random.Range(-15.0f, 15.0f);
+        recording = transform.localEulerAngles;
+
         return new Vector3(xVal, yVal, zVal);
     }
 
@@ -390,6 +397,7 @@ public class Ship : MonoBehaviour
 
     void SinkMovement()
     {
+        
         bool alt = this.transform.position.y > yAltCheck;
 
         //check if we sunk far enough
@@ -397,8 +405,13 @@ public class Ship : MonoBehaviour
         {
             Vector3 sinkVec = sinkDirection * SinkAltSpeed * Time.deltaTime;
             transform.Translate(sinkVec, Space.World);
-            Vector3 newRot = Vector3.Lerp(this.transform.localRotation.eulerAngles, rotEulerAngleCheck, CrashAngleSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(newRot);
+            if (Quaternion.Dot(transform.rotation, Quaternion.Euler(rotEulerAngleCheck)) < 0.9999f)
+            {
+                Vector3 newRot = Vector3.Lerp(this.transform.localRotation.eulerAngles, rotEulerAngleCheck, CrashAngleSpeed * Time.deltaTime);
+                //Vector3 mag = new Vector3(recording.x + 90, recording.y + 90, recording.z + 90);
+                //newRot = Vector3.ClampMagnitude(newRot, );
+                transform.rotation = Quaternion.Euler(newRot);
+            }
         }
         else
         {
