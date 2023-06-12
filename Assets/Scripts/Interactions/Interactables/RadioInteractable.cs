@@ -103,11 +103,11 @@ public class RadioInteractable : MonoBehaviour, IInteractable
 
     public string GetName()
     {
-        return "Radio Control Interactable";
+        return "radio";
     }
 
     public string GetDescription()
     {
-        return "Current song: " + AudioSource.clip.name;
+        return "change the station on ";
     }
 }

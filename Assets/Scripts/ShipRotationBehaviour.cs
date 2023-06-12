@@ -1,8 +1,23 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class ShipRotationBehaviour : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer SpriteRend
+    {
+        get
+        {
+            if (ReferenceEquals(spriteRenderer, null))
+            {
+                spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            }
+
+            return spriteRenderer;
+        }
+    }
+    
     public bool initialized;
     [SerializeField] private LayerMask whatIsShip;
 
@@ -24,10 +39,20 @@ public class ShipRotationBehaviour : MonoBehaviour
 
         StartCoroutine(ChangeShipDirection(ship));
     }
-    
+
+    private void OnTriggerExit(Collider other)
+    {
+        int incomingLayer = 1 << other.gameObject.layer;
+
+        if ((incomingLayer & whatIsShip) == 0)
+            return;
+
+        initialized = false;
+        SpriteRend.enabled = false;
+    }
+
     private IEnumerator ChangeShipDirection(Ship ship)
     {
-        print("Starting change ship direction");
         Transform shipTransform = ship.transform;
         Vector2 tilePos = transform.position.ToVector2();
 
@@ -41,7 +66,8 @@ public class ShipRotationBehaviour : MonoBehaviour
         destination.z = shipTransform.position.z;
         shipTransform.position = destination;
 
-        print("Changing ship direction to " + transform.forward.ToVector2());
         ship.OnDirectionChange(transform.forward.ToVector2());
+
+        initialized = false;
     }
 }

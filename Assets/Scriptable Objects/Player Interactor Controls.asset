@@ -13,8 +13,5 @@ MonoBehaviour:
   m_Name: Player Interactor Controls
   m_EditorClassIdentifier: 
   interactionKey: 101
-  exitLightKey: 27
-  PlayerControlForwardKey: 119
-  PlayerControlBackKey: 115
-  PlayerControlLeftKey: 97
-  PlayerControlRightKey: 100
+  altInteractionKey: 323
+  exitLightKey: 32
