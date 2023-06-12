@@ -27616,7 +27616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGoalDistance: 7
   spawnTimer: 5
-  shipObject: {fileID: 5250631786135206592, guid: da36c974fb40a064aa1bdcaf788e513c, type: 3}
+  shipObject: {fileID: 7057285097258957852, guid: 7f7af08d4f32aba4ab72a2db7c21c6fc, type: 3}
   shipParent: {fileID: 827037175}
   difficulty: 3
   activeShips: []

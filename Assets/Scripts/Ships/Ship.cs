@@ -20,6 +20,9 @@ public class Ship : MonoBehaviour
     [SerializeField] private float translationSpeed = 2f;
     [SerializeField] private float rotateSpeed = 5f;
     [SerializeField] private float difficultyValue = 1f;
+    [SerializeField] private List<MeshRenderer> colorChangeElements;
+    //public Vector3 offset;
+   // public Vector3 rotationAxis;
     private Vector2 targetDirection = new Vector2(1, 0);
 
     public float DifficultyValue => difficultyValue;
@@ -61,16 +64,19 @@ public class Ship : MonoBehaviour
     {
         if (!spawning)
         {
-            currentDirection = transform.forward.ToVector2();
+            //transform.rotation = transform.rotation * Quaternion.Euler(offset);
+            
+            currentDirection = (transform.forward).ToVector2();
             rotationVector = Vector2.Lerp(currentDirection, targetDirection, rotateSpeed * Time.deltaTime);
             transform.Rotate(Vector3.up, Vector2.SignedAngle(currentDirection, rotationVector));
+            //transform.rotation = Quaternion.Euler(offset) * transform.rotation;
 
             if (!sinkMovementActive)
             {
                 translationVector = targetDirection.ToVector3() * translationSpeed * Time.deltaTime;
                 transform.Translate(translationVector, Space.World);
 
-                TESTFUNCTION();
+                //TESTFUNCTION();
             }
 
         }
@@ -221,7 +227,10 @@ public class Ship : MonoBehaviour
         // 270 = -1,  0
         // 360 =  0, -1
 
+        //transform.rotation = Quaternion.Euler(new Vector3(0, rotVal, 0) + offset);
         transform.rotation = Quaternion.Euler(new Vector3(0, rotVal, 0));
+        //transform.rotation = transform.rotation * Quaternion.Euler(offset); 
+
     }
 
     public void AssignTeam(Team color)
@@ -236,7 +245,15 @@ public class Ship : MonoBehaviour
     }
     public void AssignMaterial(Material mat)
     {
-        GetComponent<MeshRenderer>().material = mat;
+        if(colorChangeElements.Count <= 0)
+        {
+            return;
+        }
+        foreach(MeshRenderer render in colorChangeElements)
+        {
+            render.material = mat;
+        }
+        
     }
     public Team Team { get { return team; } set { team = value; } }
 
