@@ -21,20 +21,25 @@ public class GridEnviornment : MonoBehaviour
             return;
         }
 
-       // Debug.Log("Set hazard at " + this.transform.name);
+        // Debug.Log("Set hazard at " + this.transform.name);
 
         //spawn in asset
         //could randomize rotation
-        
-        HazEnv = Instantiate(newHaz, HazSpawnOrigin.position, HazSpawnOrigin.rotation);
-        HazEnv.transform.parent = this.transform;
-        HazEnv.transform.SetPositionAndRotation(HazSpawnOrigin.transform.position, HazSpawnOrigin.transform.rotation);
-       // Debug.Log("Local: " + HazEnv.transform.localPosition);
-       // Debug.Log("Globe: " + HazEnv.transform.position);
-        HazEnv.transform.position = HazSpawnOrigin.transform.position;
+        if (HazEnv == null && !Hazard)
+        {
+            HazEnv = Instantiate(newHaz, HazSpawnOrigin.position, HazSpawnOrigin.rotation);
+            HazEnv.transform.parent = this.transform;
+            HazEnv.transform.SetPositionAndRotation(HazSpawnOrigin.transform.position, HazSpawnOrigin.transform.rotation);
+            // Debug.Log("Local: " + HazEnv.transform.localPosition);
+            // Debug.Log("Globe: " + HazEnv.transform.position);
+            HazEnv.transform.position = HazSpawnOrigin.transform.position;
 
-        //mark this tile as hazard
-        Hazard = true;
-        //note: ship fail event is going to trigger in Ship script after
+            //mark this tile as hazard
+            Hazard = true;
+            //note: ship fail event is going to trigger in Ship script after
+        } else
+        {
+            Debug.Log("Placement of Hazard already done: " + this.name);
+        }
     }
 }
