@@ -16,6 +16,7 @@ public enum Team
 }
 public class Ship : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private float translationSpeed = 2f;
     [SerializeField] private float rotateSpeed = 5f;
     [SerializeField] private float difficultyValue = 1f;
@@ -30,10 +31,33 @@ public class Ship : MonoBehaviour
     Vector3 translationVector;
     Vector2 rotationVector;
     Vector2 currentDirection;
-
-    private bool spawning = true;
     public Action<Ship> onShipOutOfBounds;
     public Action<Ship> onShipDestroy;
+    //was true
+    private bool spawning = false;
+    public Action<Ship> onShipFailed;
+    
+    #region Crash
+    [Header("Crash Stats")]
+    public GameObject crashAsset;
+    public GridEnviornment currentTile;
+    public GridEnviornment prevTile;
+    GameObject ctile;
+
+    public float yAltCheck = -3.5f;
+    public Vector3 rotEulerAngleCheck;
+    bool sinkMovementActive = false;
+    public float ShipRadius = 4;
+    private Vector3 sinkDirection = new Vector3(0, -1, 0);
+    public float CrashAngleSpeed;
+    public float SinkAltSpeed;
+    public Action<Ship> onShipCrash;
+    #endregion
+
+    [Header("Debug Gizmos")]
+    public bool gizmosOn = true;
+
+
 
 
     private void Update()
@@ -47,16 +71,29 @@ public class Ship : MonoBehaviour
             transform.Rotate(Vector3.up, Vector2.SignedAngle(currentDirection, rotationVector));
             //transform.rotation = Quaternion.Euler(offset) * transform.rotation;
 
+            if (!sinkMovementActive)
+            {
+                translationVector = targetDirection.ToVector3() * translationSpeed * Time.deltaTime;
+                transform.Translate(translationVector, Space.World);
 
-            translationVector = (targetDirection.ToVector3()) * translationSpeed * Time.deltaTime;
-            transform.Translate(translationVector, Space.World);
+                //TESTFUNCTION();
+            }
 
-            TESTFUNCTION();
         }
     }
 
+    void FixedUpdate()
+    {
+        if (!sinkMovementActive)
+        {
+            CheckCollision();
 
-
+        }
+        else
+        {
+            SinkMovement();
+        }
+    }
 
     private void TESTFUNCTION()
     {
@@ -219,4 +256,117 @@ public class Ship : MonoBehaviour
         
     }
     public Team Team { get { return team; } set { team = value; } }
+
+    //could use a sphere cast
+    void CheckCollision()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, ShipRadius);
+        foreach (var hitCollider in hitColliders)
+        {
+            GameObject go = hitCollider.gameObject;
+
+            if (LayerMask.LayerToName(go.transform.gameObject.layer) == "TileInteractable" &&
+                go.transform.TryGetComponent<GridEnviornment>(out GridEnviornment tile))
+            {
+                if (currentTile != tile && prevTile != tile)
+                {
+                    //have a new tile
+                    //check if it is an obstacle
+                    TileCheck(tile);
+                    return;
+                }
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (gizmosOn)
+        {
+            Gizmos.color = Color.green;
+
+            Gizmos.DrawWireSphere(transform.position, ShipRadius);
+
+        }
+    }
+
+    Vector3 RandomAngle()
+    {
+        CrashAngleSpeed = UnityEngine.Random.Range(0.2f, 0.45f);
+        float xVal = transform.localEulerAngles.x + UnityEngine.Random.Range(10, -30f);
+        float yVal = transform.localEulerAngles.y + UnityEngine.Random.Range(-10f, 10f);
+        float zVal = transform.localEulerAngles.z + UnityEngine.Random.Range(-10.0f, 10.0f);
+        return new Vector3(xVal, yVal, zVal);
+    }
+
+    void TileCheck(GridEnviornment tile)
+    {
+        //is this new tile an obstacle? do we need to crash?
+        if(tile.Hazard)
+        {
+            //start sink sequence
+            sinkMovementActive = true;
+            Debug.Log(transform.gameObject.name + " Has hit an obstacle on tile " + tile.gameObject.name + " and is now crashing. nice job");
+            rotEulerAngleCheck = RandomAngle();
+            //crashing = true;
+            prevTile = currentTile;
+            //currentTile = currentTile;
+
+        } else {
+            Debug.Log("Set Tile: " + tile.name);
+            //tile is safe, set it as current tile. buisness as usual
+            if (currentTile == null)
+                prevTile = tile;
+            else
+                prevTile = currentTile;
+
+            currentTile = tile;
+
+            ctile = currentTile.gameObject;
+        }
+
+    }
+
+    //when the ship crashes
+    void ShipCrash()
+    {
+        //check which tile we are currently on or the previous one since technically we will check if the incoming tile is safe 
+        //shouldnt need to flat out delte tile, justs instead mark that tile as a hazard and add the asset to the tile
+        //when this ship crashes it will stop then sink down
+        Debug.Log(transform.name + "Crashed at " + prevTile.name);
+
+        //if (prevTile != null)
+            prevTile.SetNewHazard(crashAsset);
+        //else
+        //{
+         //   Debug.LogWarning("No prev tile to set, use current");
+         //   currentTile.SetNewHazard(crashAsset);
+        //}
+
+        //run event for failure
+        onShipCrash?.Invoke(this);
+
+        //for now disasble everything and lock it up
+        this.gameObject.SetActive(false);
+        this.GetComponent<Ship>().enabled = false;
+    }
+
+    void SinkMovement()
+    {
+        bool alt = this.transform.position.y > yAltCheck;
+
+        //check if we sunk far enough
+        if (alt)
+        {
+            Vector3 sinkVec = sinkDirection * SinkAltSpeed * Time.deltaTime;
+            transform.Translate(sinkVec, Space.World);
+            Vector3 newRot = Vector3.Lerp(this.transform.localRotation.eulerAngles, rotEulerAngleCheck, CrashAngleSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(newRot);
+        }
+        else
+        {
+            //sinkMovementActive = false;
+            ShipCrash();
+        }
+    }
 }

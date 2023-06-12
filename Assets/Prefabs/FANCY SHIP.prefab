@@ -225,11 +225,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 798644b0a1a06c44dafd2c40297319e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  translationSpeed: 100
+  translationSpeed: 40
   rotateSpeed: 3
-  difficultyValue: 1
-  colorChangeElements:
-  - {fileID: 8140323883821432008}
+  currentTile: {fileID: 0}
+  prevTile: {fileID: 0}
+  crashAsset: {fileID: 1025157051033047400, guid: 82800ca07c02a1344aae6768493c1328, type: 3}
+  yAltCheck: -3.5
+  rotEulerAngleCheck: {x: 20, y: 0, z: 0}
+  ShipRadius: 4
+  CrashAngleSpeed: 0
+  SinkAltSpeed: 0
+  gizmosOn: 1
 --- !u!54 &5026818098812201683
 Rigidbody:
   m_ObjectHideFlags: 0

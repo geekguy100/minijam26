@@ -9,7 +9,7 @@ public class RadioInteractable : MonoBehaviour, IInteractable
     AudioSource AudioSource;
 
     public List<AudioClip> Playlist;
-    private int currentSong = 0;
+    public int currentSong = 0;
 
     public AudioClip RadioStaticChange;
     //will handle music
@@ -53,18 +53,24 @@ public class RadioInteractable : MonoBehaviour, IInteractable
         //AudioSource.Stop();
         AudioSource.clip = RadioStaticChange;
         AudioSource.Play();
-
+        Debug.Log("Switch: " + GetDescription());
         // TODO: Play an sound byte to identify changing of the song
 
-        PlayNextSong();
+        if (audioPrevent)
+        {
+            // PlayAgroSound();
+            //audio cooldown
+            StartCoroutine(AudioCoolDown());
+        }
+        
     }
-
 
     void PlayNextSong()
     {
-        if(currentSong < Playlist.Count -1)
+        if(currentSong < Playlist.Count - 1)
         {
-            AudioSource.clip = Playlist[currentSong++];
+            currentSong++;
+            AudioSource.clip = Playlist[currentSong];
             AudioSource.Play();
             Debug.Log("Now Playing " + GetDescription());
         }
@@ -73,8 +79,16 @@ public class RadioInteractable : MonoBehaviour, IInteractable
             currentSong = 0;
             AudioSource.clip = Playlist[currentSong];
             Debug.Log("Now Playing Nothing...");
-        }
-        
+        } 
+    }
+
+    bool audioPrevent = true;
+    IEnumerator AudioCoolDown()
+    {
+        audioPrevent = false;
+        yield return new WaitForSeconds(RadioStaticChange.length);
+        audioPrevent = true;
+        PlayNextSong();
     }
 
     public void PerformInteraction()
@@ -94,6 +108,6 @@ public class RadioInteractable : MonoBehaviour, IInteractable
 
     public string GetDescription()
     {
-        return "Current song: " + Playlist[currentSong].name;
+        return "Current song: " + AudioSource.clip.name;
     }
 }
