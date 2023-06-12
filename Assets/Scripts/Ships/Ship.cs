@@ -289,14 +289,16 @@ public class Ship : MonoBehaviour
         {
             //start sink sequence
             sinkMovementActive = true;
-            Debug.Log(transform.gameObject.name + " Has hit an obstacle on tile " + tile.gameObject.name + "and is now crashing. nice job");
+            Debug.Log(transform.gameObject.name + " Has hit an obstacle on tile " + tile.gameObject.name + " and is now crashing. nice job");
             rotEulerAngleCheck = RandomAngle();
             //crashing = true;
+            prevTile = currentTile;
+            //currentTile = currentTile;
 
         } else {
             Debug.Log("Set Tile: " + tile.name);
             //tile is safe, set it as current tile. buisness as usual
-            if (!currentTile)
+            if (currentTile == null)
                 prevTile = tile;
             else
                 prevTile = currentTile;
@@ -314,22 +316,22 @@ public class Ship : MonoBehaviour
         //check which tile we are currently on or the previous one since technically we will check if the incoming tile is safe 
         //shouldnt need to flat out delte tile, justs instead mark that tile as a hazard and add the asset to the tile
         //when this ship crashes it will stop then sink down
-        Debug.Log(transform.name + "Crashed.");
+        Debug.Log(transform.name + "Crashed at " + prevTile.name);
 
-        if (prevTile)
+        //if (prevTile != null)
             prevTile.SetNewHazard(crashAsset);
-        else
-        {
-            Debug.LogWarning("No prev tile to set, use current");
-            currentTile.SetNewHazard(crashAsset);
-        }
+        //else
+        //{
+         //   Debug.LogWarning("No prev tile to set, use current");
+         //   currentTile.SetNewHazard(crashAsset);
+        //}
 
         //run event for failure
         onShipCrash?.Invoke(this);
 
         //for now disasble everything and lock it up
         this.gameObject.SetActive(false);
-
+        this.GetComponent<Ship>().enabled = false;
     }
 
     void SinkMovement()
