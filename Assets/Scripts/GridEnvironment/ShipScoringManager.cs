@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(GridField))]
@@ -18,6 +19,8 @@ public class ShipScoringManager : MonoBehaviour
     public int crashes = 0;
     public int outOfBounds = 0;
 
+    public TMP_Text GameScoreText;
+
     private void Awake()
     {
         grid = GetComponent<GridField>();
@@ -26,6 +29,12 @@ public class ShipScoringManager : MonoBehaviour
         {
             teamGoals.Add(team, new List<ShipGoal>());
         }
+
+    }
+
+    private void Update()
+    {
+        GameScoreText.text = "Score: " + TESTSCORE.ToString();
 
     }
 
